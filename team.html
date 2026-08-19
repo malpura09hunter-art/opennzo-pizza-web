@@ -7,23 +7,25 @@
 <title>OPENNZO — Our Team</title>
 <link rel="stylesheet" href="style.css">
 <style>
-.team-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
-.team-card{position:relative;display:grid;grid-template-columns:100px 1fr;grid-template-areas:"roll name" "roll role" "email email";min-height:220px;padding:28px;align-items:start}
-.team-card>span{grid-area:roll;position:static!important;align-self:start;justify-self:start;font-size:.68rem;letter-spacing:.12em;color:var(--accent);font-weight:900;border:1px solid rgba(228,87,46,.25);border-radius:999px;padding:9px 10px;white-space:nowrap}
-.team-card h3{grid-area:name;margin:0;font-size:1.3rem;align-self:end}
-.team-card p{grid-area:role;margin:5px 0 0;font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
-.team-card a{grid-area:email;display:block;width:100%;box-sizing:border-box;margin-top:30px;padding:16px 14px;border:1px solid var(--line);border-radius:10px;font-size:.78rem;color:var(--muted);overflow-wrap:anywhere;word-break:break-word;text-decoration:none;transition:.2s ease}
-.team-card a:hover,.team-card a:focus{color:var(--accent);border-color:var(--accent);background:rgba(228,87,46,.05);outline:none}
-@media(max-width:700px){.team-grid{grid-template-columns:1fr}.team-card{grid-template-columns:88px 1fr;min-height:210px}}
+.team-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.team-card{position:relative;display:grid;grid-template-columns:104px 1fr;grid-template-areas:"roll name" "roll role" "email email";min-height:230px;padding:30px;align-items:start;overflow:hidden}
+.team-card::after{content:"";position:absolute;right:-35px;bottom:-55px;width:130px;height:130px;border:1px solid rgba(228,87,46,.14);border-radius:50%;transition:.3s ease}
+.team-card:hover::after{transform:scale(1.25)}
+.team-card>span{grid-area:roll;position:static!important;align-self:start;justify-self:start;font-size:.68rem;letter-spacing:.12em;color:var(--accent);font-weight:900;border:1px solid rgba(228,87,46,.28);border-radius:999px;padding:9px 11px;white-space:nowrap;background:rgba(228,87,46,.04)}
+.team-card h3{grid-area:name;margin:0;font-size:1.45rem;align-self:end;line-height:1.1}
+.team-card p{grid-area:role;margin:7px 0 0;font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+.team-card a{grid-area:email;display:block;width:100%;box-sizing:border-box;margin-top:30px;padding:15px 16px;border:1px solid var(--line);border-radius:12px;font-size:.78rem;color:var(--muted);overflow-wrap:anywhere;word-break:break-word;text-decoration:none;transition:.2s ease;background:rgba(255,255,255,.015);position:relative;z-index:1}
+.team-card a:hover,.team-card a:focus{color:var(--accent);border-color:var(--accent);background:rgba(228,87,46,.06);outline:none;transform:translateY(-2px)}
+@media(max-width:700px){.team-grid{grid-template-columns:1fr}.team-card{grid-template-columns:88px 1fr;min-height:215px;padding:24px}}
 </style>
 </head>
 <body>
 <header class="site-header"><nav class="nav container" aria-label="Primary navigation"><a class="brand" href="index.html">OPENNZO<span class="brand-dot">.</span></a><input class="nav-toggle" type="checkbox" id="nav-toggle"><label class="nav-toggle-label" for="nav-toggle"><span></span><span></span><span></span></label><div class="nav-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="menu.html">Menu</a><a href="orders.html">Pizza Orders</a><a href="feedback.html">Feedback</a><a href="team.html" aria-current="page">Our Team</a><a href="contact.html">Contact</a><a href="code-details.html">Code Details</a><a href="explanation.html">Explanation</a></div></nav></header>
-<main><section class="section-pad"><div class="container"><div class="section-heading split"><div><p class="eyebrow">THE PROJECT TEAM</p><h1>Five minds.<br><em>One project.</em></h1></div><p>OPENNZO is a Web Programming presentation project. Roll numbers and contact details are displayed separately for clarity.</p></div><div class="team-grid">
-<article class="team-card"><span>ROLL 201</span><h3>Om Dula</h3><p>Project Team Member</p><a href="mailto:aparnadulam1976@gmail.com" aria-label="Email Om Dula">✉ aparnadulam1976@gmail.com</a></article>
-<article class="team-card"><span>ROLL 202</span><h3>Omkar Shirke</h3><p>Project Team Member</p><a href="mailto:omkar23shirke@gmail.com" aria-label="Email Omkar Shirke">✉ omkar23shirke@gmail.com</a></article>
-<article class="team-card"><span>ROLL 203</span><h3>Ovesh Malpura</h3><p>Project Team Member</p><a href="mailto:info.oveshmalpuracyberlab@zohomail.in" aria-label="Email Ovesh Malpura">✉ info.oveshmalpuracyberlab@zohomail.in</a></article>
-<article class="team-card"><span>ROLL 204</span><h3>Parth Shinde</h3><p>Project Team Member</p><a href="mailto:parth.shinde9870@gmail.com" aria-label="Email Parth Shinde">✉ parth.shinde9870@gmail.com</a></article>
-<article class="team-card"><span>ROLL 205</span><h3>Pawan Sonkar</h3><p>Project Team Member</p><a href="mailto:pawan.osonkar709@gmail.com" aria-label="Email Pawan Sonkar">✉ pawan.osonkar709@gmail.com</a></article>
+<main><section class="section-pad"><div class="container"><div class="section-heading split"><div><p class="eyebrow">THE OPENNZO TEAM</p><h1>Meet the<br><em>team.</em></h1></div><p>Five project members. One Web Programming presentation. Every roll number and email is kept clearly separated for easy reading.</p></div><div class="team-grid">
+<article class="team-card"><span>ROLL 201</span><h3>Om Dula</h3><p>Project Team Member</p><a href="mailto:aparnadulam1976@gmail.com" aria-label="Email Om Dula">✉&nbsp; aparnadulam1976@gmail.com</a></article>
+<article class="team-card"><span>ROLL 202</span><h3>Omkar Shirke</h3><p>Project Team Member</p><a href="mailto:omkar23shirke@gmail.com" aria-label="Email Omkar Shirke">✉&nbsp; omkar23shirke@gmail.com</a></article>
+<article class="team-card"><span>ROLL 203</span><h3>Ovesh Malpura</h3><p>Project Team Member</p><a href="mailto:info.oveshmalpuracyberlab@zohomail.in" aria-label="Email Ovesh Malpura">✉&nbsp; info.oveshmalpuracyberlab@zohomail.in</a></article>
+<article class="team-card"><span>ROLL 204</span><h3>Parth Shinde</h3><p>Project Team Member</p><a href="mailto:parth.shinde9870@gmail.com" aria-label="Email Parth Shinde">✉&nbsp; parth.shinde9870@gmail.com</a></article>
+<article class="team-card"><span>ROLL 205</span><h3>Pawan Sonkar</h3><p>Project Team Member</p><a href="mailto:pawan.osonkar709@gmail.com" aria-label="Email Pawan Sonkar">✉&nbsp; pawan.osonkar709@gmail.com</a></article>
 </div></div></section></main>
 </body></html>
