@@ -1,33 +1,2037 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="OPENNZO Web Programming Project Guide — page-by-page HTML, CSS, forms, tags, attributes, source code and presentation explanation.">
-<title>OPENNZO — Complete Project Guide</title>
-<link rel="stylesheet" href="style.css">
-<style>
-.guide{background:#10100f;color:#f4eee5}.guide-wrap{width:min(1180px,calc(100% - 40px));margin:auto}.guide-hero{padding:100px 0 55px}.guide-hero h1{font-size:clamp(3rem,7vw,6.5rem);line-height:.92;margin:14px 0}.guide em{color:#e4572e;font-style:normal}.guide .lead{max-width:760px;color:#aaa39a;font-size:1.05rem;line-height:1.8}.guide-nav{position:sticky;top:0;z-index:20;background:rgba(16,16,15,.94);backdrop-filter:blur(12px);border-block:1px solid #302d29}.guide-nav .guide-wrap{display:flex;gap:8px;overflow:auto;padding:13px 0}.guide-nav a{white-space:nowrap;color:#c8c0b6;text-decoration:none;padding:9px 13px;border-radius:999px;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em}.guide-nav a:hover{background:#24211e;color:#fff}.guide-section{padding:72px 0;border-bottom:1px solid #2b2925}.eyebrow2{color:#e48762;font-size:.7rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase}.guide h2{font-size:clamp(2rem,4vw,3.7rem);margin:12px 0 24px}.guide h3{margin:0 0 10px}.guide p{color:#aaa39a;line-height:1.75}.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:30px}.flow div{padding:20px;border:1px solid #36322e;border-radius:16px;background:#171614}.flow b{display:block;color:#f3e9dd;margin-bottom:7px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}.card{padding:25px;border:1px solid #36322e;border-radius:18px;background:#171614}.card .num{color:#e4572e;font-family:monospace;font-size:.8rem}.card a{display:inline-block;margin-top:14px;color:#f0a77e;text-decoration:none;font-weight:800;font-size:.78rem}.breakdown{margin-top:28px;border:1px solid #36322e;border-radius:18px;overflow:hidden}.row{display:grid;grid-template-columns:1fr 1fr 2fr 2fr;border-bottom:1px solid #302d29}.row:last-child{border:0}.row>*{padding:14px 16px;border-right:1px solid #302d29}.row>*:last-child{border:0}.row.head{background:#24211e;color:#e89b76;font-weight:900;font-size:.72rem;text-transform:uppercase}.row code{color:#f0a77e}.talk{margin-top:25px;padding:22px;border-left:3px solid #e4572e;background:#191714;border-radius:0 14px 14px 0}.talk strong{color:#f3e9dd}.source{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:20px;border:1px solid #36322e;border-radius:16px;background:#171614;margin-top:20px}.source a{color:#f0a77e;text-decoration:none;font-weight:800}.tag-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:25px}.tag-card{padding:18px;border:1px solid #36322e;border-radius:14px;background:#171614}.tag-card code{font-size:1rem;color:#f0a77e}.tag-card p{margin:7px 0 0;font-size:.9rem}.checklist{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:25px}.check{padding:15px 18px;border:1px solid #36322e;border-radius:13px;background:#171614}.check b{color:#f1e8dd}.cta{display:inline-block;margin-top:20px;padding:13px 18px;border-radius:999px;background:#eee4d7;color:#151311;text-decoration:none;font-weight:900}.muted{color:#817b74}.guide footer{padding:50px 0;color:#827c74}
-@media(max-width:850px){.flow{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:1fr 1fr}.row{grid-template-columns:1fr 1fr}.row>*:nth-child(n+3){border-top:1px solid #302d29}.tag-grid,.checklist{grid-template-columns:1fr}}
-@media(max-width:560px){.guide-wrap{width:min(100% - 28px,1180px)}.guide-hero{padding:70px 0 40px}.cards{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.guide-section{padding:50px 0}.row{display:block}.row>*{display:block;border-right:0}.row.head{display:none}}
-</style>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="OPENNZO Project Guide — HTML5 and CSS3 structure, tags, forms, attributes, styling, layouts, responsive design and source code."
+    >
+
+    <title>OPENNZO — Project Guide</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /*
+        ============================================================
+        OPENNZO PROJECT GUIDE
+        Documentation styling
+        ============================================================
+        */
+
+        .guide {
+            background: #10100f;
+            color: #f4eee5;
+            min-height: 100vh;
+        }
+
+        .guide-wrap {
+            width: min(1180px, calc(100% - 40px));
+            margin: auto;
+        }
+
+        /* --------------------------------------------------------
+           HERO
+        -------------------------------------------------------- */
+
+        .guide-hero {
+            padding: 90px 0 55px;
+        }
+
+        .guide-hero h1 {
+            font-size: clamp(3rem, 7vw, 6rem);
+            line-height: 0.95;
+            margin: 15px 0;
+        }
+
+        .guide-hero h1 em {
+            color: #e4572e;
+            font-style: normal;
+        }
+
+        .guide-lead {
+            max-width: 780px;
+            color: #aaa39a;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        /* --------------------------------------------------------
+           GUIDE NAVIGATION
+        -------------------------------------------------------- */
+
+        .guide-nav {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+
+            background: rgba(16, 16, 15, 0.94);
+
+            backdrop-filter: blur(12px);
+
+            border-top: 1px solid #302d29;
+            border-bottom: 1px solid #302d29;
+        }
+
+        .guide-nav .guide-wrap {
+            display: flex;
+            gap: 8px;
+
+            overflow-x: auto;
+
+            padding: 13px 0;
+        }
+
+        .guide-nav a {
+            white-space: nowrap;
+
+            color: #c8c0b6;
+            text-decoration: none;
+
+            padding: 9px 13px;
+
+            border-radius: 999px;
+
+            font-size: 0.72rem;
+            font-weight: 800;
+
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .guide-nav a:hover {
+            background: #24211e;
+            color: #ffffff;
+        }
+
+        /* --------------------------------------------------------
+           SECTIONS
+        -------------------------------------------------------- */
+
+        .guide-section {
+            padding: 65px 0;
+
+            border-bottom: 1px solid #2b2925;
+        }
+
+        .eyebrow {
+            color: #e48762;
+
+            font-size: 0.7rem;
+            font-weight: 900;
+
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .guide-section h2 {
+            font-size: clamp(2rem, 4vw, 3.7rem);
+            margin: 12px 0 22px;
+        }
+
+        .guide-section h3 {
+            margin: 0 0 10px;
+        }
+
+        .guide-section p {
+            color: #aaa39a;
+            line-height: 1.75;
+        }
+
+        /* --------------------------------------------------------
+           CARDS
+        -------------------------------------------------------- */
+
+        .cards {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 16px;
+
+            margin-top: 30px;
+        }
+
+        .card {
+            padding: 24px;
+
+            border: 1px solid #36322e;
+
+            border-radius: 18px;
+
+            background: #171614;
+        }
+
+        .card-number {
+            color: #e4572e;
+
+            font-family: monospace;
+
+            font-size: 0.8rem;
+        }
+
+        .card code {
+            color: #f0a77e;
+        }
+
+        /* --------------------------------------------------------
+           CODE BLOCKS
+        -------------------------------------------------------- */
+
+        .code-box {
+            margin-top: 22px;
+
+            padding: 22px;
+
+            background: #171614;
+
+            border: 1px solid #36322e;
+
+            border-radius: 16px;
+
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            margin: 0;
+
+            color: #f0a77e;
+
+            font-family:
+                Consolas,
+                Monaco,
+                monospace;
+
+            font-size: 0.9rem;
+
+            line-height: 1.7;
+        }
+
+        /* --------------------------------------------------------
+           TAG GRID
+        -------------------------------------------------------- */
+
+        .tag-grid {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 12px;
+
+            margin-top: 25px;
+        }
+
+        .tag-card {
+            padding: 18px;
+
+            border: 1px solid #36322e;
+
+            border-radius: 14px;
+
+            background: #171614;
+        }
+
+        .tag-card code {
+            color: #f0a77e;
+
+            font-size: 1rem;
+        }
+
+        .tag-card p {
+            margin: 7px 0 0;
+
+            font-size: 0.9rem;
+        }
+
+        /* --------------------------------------------------------
+           TABLE
+        -------------------------------------------------------- */
+
+        .table {
+            margin-top: 25px;
+
+            border: 1px solid #36322e;
+
+            border-radius: 16px;
+
+            overflow: hidden;
+        }
+
+        .table-row {
+            display: grid;
+
+            grid-template-columns: 1fr 2fr 2fr;
+
+            border-bottom: 1px solid #302d29;
+        }
+
+        .table-row:last-child {
+            border-bottom: 0;
+        }
+
+        .table-row > * {
+            padding: 14px 16px;
+
+            border-right: 1px solid #302d29;
+        }
+
+        .table-row > *:last-child {
+            border-right: 0;
+        }
+
+        .table-head {
+            background: #24211e;
+
+            color: #e89b76;
+
+            font-size: 0.72rem;
+
+            font-weight: 900;
+
+            text-transform: uppercase;
+        }
+
+        .table code {
+            color: #f0a77e;
+        }
+
+        /* --------------------------------------------------------
+           CALLOUT
+        -------------------------------------------------------- */
+
+        .callout {
+            margin-top: 25px;
+
+            padding: 20px 22px;
+
+            border-left: 3px solid #e4572e;
+
+            background: #191714;
+
+            border-radius: 0 14px 14px 0;
+        }
+
+        .callout strong {
+            color: #f3e9dd;
+        }
+
+        .callout p {
+            margin-bottom: 0;
+        }
+
+        /* --------------------------------------------------------
+           SOURCE BUTTON
+        -------------------------------------------------------- */
+
+        .source-link {
+            display: inline-block;
+
+            margin-top: 18px;
+
+            padding: 13px 18px;
+
+            border-radius: 999px;
+
+            background: #eee4d7;
+
+            color: #151311;
+
+            text-decoration: none;
+
+            font-weight: 900;
+        }
+
+        .source-link:hover {
+            transform: translateY(-2px);
+        }
+
+        /* --------------------------------------------------------
+           FOOTER
+        -------------------------------------------------------- */
+
+        .guide-footer {
+            padding: 50px 0;
+
+            color: #827c74;
+        }
+
+        /* --------------------------------------------------------
+           RESPONSIVE
+        -------------------------------------------------------- */
+
+        @media (max-width: 850px) {
+
+            .cards {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .tag-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .table-row {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 560px) {
+
+            .guide-wrap {
+                width: min(
+                    calc(100% - 28px),
+                    1180px
+                );
+            }
+
+            .guide-hero {
+                padding: 70px 0 40px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .guide-section {
+                padding: 50px 0;
+            }
+
+            .table-row {
+                display: block;
+            }
+
+            .table-row > * {
+                display: block;
+
+                border-right: 0;
+            }
+
+            .table-head {
+                display: none;
+            }
+        }
+    </style>
 </head>
+
 <body class="guide">
-<header class="site-header"><nav class="nav container" aria-label="Project navigation"><a class="brand" href="index.html">OPENNZO<span class="brand-dot">.</span></a><div class="nav-links"><a href="index.html">Demo Website</a><a href="project-guide.html">Project Guide</a><a href="web-reference.html">HTML + CSS Reference</a><a href="code-details.html">Source Code</a></div></nav></header>
+
+<!-- ============================================================
+     HEADER
+============================================================ -->
+
+<header class="site-header">
+
+    <nav
+        class="nav container"
+        aria-label="Project navigation"
+    >
+
+        <a
+            class="brand"
+            href="index.html"
+        >
+            OPENNZO<span class="brand-dot">.</span>
+        </a>
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html">About</a>
+
+            <a href="menu.html">Menu</a>
+
+            <a href="orders.html">Pizza Orders</a>
+
+            <a href="feedback.html">Feedback</a>
+
+            <a href="team.html">Our Team</a>
+
+            <a href="contact.html">Contact</a>
+
+            <a href="code-details.html">Code Details</a>
+
+            <a href="explanation.html">Explanation</a>
+
+            <a href="project-guide.html">
+                Project Guide
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
 <main>
-<section class="guide-hero"><div class="guide-wrap"><p class="eyebrow2">WEB PROGRAMMING PRACTICAL • 2026</p><h1>Understand<br><em>OPENNZO.</em></h1><p class="lead">This is the teacher-facing guide for the actual OPENNZO project. It explains the website in a fixed order: project introduction → how pages connect → each webpage → actual HTML tags → actual CSS → forms → attributes → source code → presentation questions. Use it as the speaking guide during your practical.</p></div></section>
-<nav class="guide-nav"><div class="guide-wrap"><a href="#intro">01 Introduction</a><a href="#flow">02 How it works</a><a href="#pages">03 Pages</a><a href="#home">04 Home</a><a href="#forms">05 Forms</a><a href="#contact">06 Contact</a><a href="#html">07 HTML</a><a href="#css">08 CSS</a><a href="#source">09 Source</a><a href="#talk">10 Presentation</a></div></nav>
-<section class="guide-section" id="intro"><div class="guide-wrap"><p class="eyebrow2">01 • PROJECT INTRODUCTION</p><h2>What is OPENNZO?</h2><p><strong>OPENNZO — Fresh. Hot. Unforgettable.</strong> is a pizza restaurant website created as a Web Programming practical and presentation project. The restaurant interface demonstrates a real product-style UI, while the documentation explains the HTML5 and CSS3 techniques used to build it.</p><div class="cards"><article class="card"><span class="num">PROJECT</span><h3>OPENNZO Pizza</h3><p>Premium restaurant concept with separate pages for the complete experience.</p></article><article class="card"><span class="num">TECHNOLOGY</span><h3>HTML5 + CSS3</h3><p>Semantic HTML provides structure. CSS controls layout, typography, colour, responsiveness and interaction.</p></article><article class="card"><span class="num">PURPOSE</span><h3>Web Programming</h3><p>Designed to be demonstrated to a teacher and explained tag-by-tag and concept-by-concept.</p></article></div><div class="talk"><strong>Say this to the teacher:</strong><p>“OPENNZO is a pizza restaurant presentation website. We used HTML5 to create the structure and CSS3 to design the interface, including responsive layouts, forms, cards, navigation, transitions and typography.”</p></div></div></section>
-<section class="guide-section" id="flow"><div class="guide-wrap"><p class="eyebrow2">02 • WEBSITE FLOW</p><h2>How the webpages work together</h2><p>Each major restaurant area is a separate HTML document. The navigation uses normal anchor links with <code>href</code> values, so JavaScript is not needed for page-to-page navigation.</p><div class="flow"><div><b>01 Home</b><span class="muted">index.html</span></div><div><b>02 About</b><span class="muted">about.html</span></div><div><b>03 Menu</b><span class="muted">menu.html</span></div><div><b>04 Orders</b><span class="muted">orders.html</span></div><div><b>05 Feedback</b><span class="muted">feedback.html</span></div><div><b>06 Team</b><span class="muted">team.html</span></div><div><b>07 Contact</b><span class="muted">contact.html</span></div><div><b>08 Source</b><span class="muted">code-details.html</span></div><div><b>09 Explanation</b><span class="muted">explanation.html</span></div><div><b>10 Guide</b><span class="muted">project-guide.html</span></div></div><div class="talk"><strong>How to explain navigation:</strong><p>“The navigation is inside the semantic <code>&lt;nav&gt;</code> element. Every link uses an <code>&lt;a&gt;</code> element. The <code>href</code> points to another HTML file, so clicking Contact loads <code>contact.html</code> and clicking Menu loads <code>menu.html</code>.”</p></div></div></section>
-<section class="guide-section" id="pages"><div class="guide-wrap"><p class="eyebrow2">03 • PAGE-BY-PAGE MAP</p><h2>What to explain on every page</h2><div class="cards"><article class="card"><span class="num">HOME</span><h3>index.html</h3><p>Header, navigation, hero, pizza image, CTA links, project guide, feature cards and footer.</p><a href="#home">Study Home →</a></article><article class="card"><span class="num">ABOUT</span><h3>about.html</h3><p>Restaurant story, feature content, semantic sections and card layout.</p><a href="about.html">Open actual page →</a></article><article class="card"><span class="num">MENU</span><h3>menu.html</h3><p>Pizza cards, images, descriptions, prices, CTA links, Grid and hover effects.</p><a href="menu.html">Open actual page →</a></article><article class="card"><span class="num">ORDERS</span><h3>orders.html</h3><p>Semantic form controls, labels, inputs, selects, options, radio buttons, checkboxes and textarea.</p><a href="orders.html">Open actual page →</a></article><article class="card"><span class="num">FEEDBACK</span><h3>feedback.html</h3><p>Feedback form, rating controls, labels, validation attributes and responsive form styling.</p><a href="feedback.html">Open actual page →</a></article><article class="card"><span class="num">TEAM</span><h3>team.html</h3><p>Team cards, roll-number presentation, clickable email links and responsive layout.</p><a href="team.html">Open actual page →</a></article><article class="card"><span class="num">CONTACT</span><h3>contact.html</h3><p>Restaurant identity, demo contact information, clickable email and contact form.</p><a href="contact.html">Open actual page →</a></article><article class="card"><span class="num">DOCUMENTATION</span><h3>code-details.html</h3><p>Actual source-code presentation and technical project details.</p><a href="code-details.html">Open source →</a></article><article class="card"><span class="num">DOCUMENTATION</span><h3>explanation.html</h3><p>Detailed HTML/CSS learning material, attributes, forms and concepts.</p><a href="explanation.html">Open explanation →</a></article></div></div></section>
-<section class="guide-section" id="home"><div class="guide-wrap"><p class="eyebrow2">04 • HOME PAGE DEEP DIVE</p><h2>Explain the Home page<br><em>element by element.</em></h2><p>The Home page is the best page to start the practical because it demonstrates semantic structure, navigation, headings, paragraphs, images, links, figures, cards and CSS layout.</p><div class="breakdown"><div class="row head"><div>Visible part</div><div>HTML</div><div>Purpose</div><div>OPENNZO explanation</div></div><div class="row"><div>Document declaration</div><div><code>&lt;!DOCTYPE html&gt;</code></div><div>Tells browser to use modern HTML.</div><div>Placed at the beginning of <code>index.html</code>.</div></div><div class="row"><div>Page root</div><div><code>&lt;html lang="en"&gt;</code></div><div>Root document element and language.</div><div>Wraps the entire Home document.</div></div><div class="row"><div>Metadata</div><div><code>&lt;head&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;link&gt;</code></div><div>Provides browser metadata and CSS connection.</div><div>Controls title, viewport, description and stylesheet.</div></div><div class="row"><div>Navigation</div><div><code>&lt;header&gt;</code> + <code>&lt;nav&gt;</code></div><div>Semantic site navigation.</div><div>Contains Home, About, Menu, Orders, Feedback, Team, Contact, Code Details and Explanation.</div></div><div class="row"><div>Brand</div><div><code>&lt;a&gt;</code> + <code>&lt;span&gt;</code></div><div>Clickable logo and decorative dot.</div><div>Brand link returns to <code>index.html</code>.</div></div><div class="row"><div>Hero heading</div><div><code>&lt;h1&gt;</code></div><div>Primary page heading.</div><div>Communicates the OPENNZO restaurant identity and tagline.</div></div><div class="row"><div>Hero text</div><div><code>&lt;p&gt;</code></div><div>Supporting paragraph.</div><div>Explains the handcrafted pizza concept.</div></div><div class="row"><div>Pizza visual</div><div><code>&lt;figure&gt;</code> + <code>&lt;img&gt;</code> + <code>&lt;figcaption&gt;</code></div><div>Groups an image and its caption.</div><div>Shows the OPENNZO pizza and “Fresh from the oven” information.</div></div><div class="row"><div>CTA buttons</div><div><code>&lt;a&gt;</code></div><div>Navigation actions.</div><div>Order button opens <code>orders.html</code>; menu button opens <code>menu.html</code>.</div></div><div class="row"><div>Feature cards</div><div><code>&lt;section&gt;</code> + <code>&lt;article&gt;</code></div><div>Groups and separates independent content.</div><div>Explains the restaurant experience, programming and source code.</div></div><div class="row"><div>Footer</div><div><code>&lt;footer&gt;</code></div><div>Closing site information.</div><div>Provides identity and secondary navigation.</div></div></div><div class="talk"><strong>Teacher answer:</strong><p>“On Home, I use semantic HTML to divide the page into header, navigation, main content sections and footer. The hero uses a heading, paragraph, image and anchor elements. The cards use articles because each card is an independent piece of content. CSS Grid and Flexbox control the layout.”</p></div><div class="source"><span>Need the exact Home source?</span><a href="https://github.com/malpura09hunter-art/opennzo-pizza-web/blob/main/index.html" target="_blank" rel="noopener">Open actual index.html on GitHub ↗</a></div></div></section>
-<section class="guide-section" id="forms"><div class="guide-wrap"><p class="eyebrow2">05 • FORMS</p><h2>How the Order &amp; Feedback forms work</h2><p>Forms are especially important for the practical because they demonstrate multiple HTML elements and attributes working together.</p><div class="cards"><article class="card"><span class="num">FORM</span><h3>&lt;form&gt;</h3><p>Container for controls. It groups the customer's data-entry fields into one logical interaction.</p></article><article class="card"><span class="num">LABEL</span><h3>&lt;label&gt;</h3><p>Names a control. The <code>for</code> attribute connects the label to a matching input <code>id</code>.</p></article><article class="card"><span class="num">INPUT</span><h3>&lt;input&gt;</h3><p>Collects text, email, telephone, number, time, radio and checkbox values depending on its <code>type</code>.</p></article><article class="card"><span class="num">SELECT</span><h3>&lt;select&gt; + &lt;option&gt;</h3><p>Creates dropdown choices such as pizza, size and crust.</p></article><article class="card"><span class="num">GROUP</span><h3>&lt;fieldset&gt; + &lt;legend&gt;</h3><p>Groups related controls, such as pizza size or extras, with a meaningful caption.</p></article><article class="card"><span class="num">LONG TEXT</span><h3>&lt;textarea&gt;</h3><p>Collects multi-line content such as special instructions or feedback.</p></article></div><div class="talk"><strong>Important:</strong><p>“The forms are demonstration forms. HTML provides the controls and browser validation attributes; there is no restaurant backend or database processing.”</p></div><div class="source"><span>See the actual Order form source.</span><a href="https://github.com/malpura09hunter-art/opennzo-pizza-web/blob/main/orders.html" target="_blank" rel="noopener">Open orders.html ↗</a></div><div class="source"><span>See the actual Feedback form source.</span><a href="https://github.com/malpura09hunter-art/opennzo-pizza-web/blob/main/feedback.html" target="_blank" rel="noopener">Open feedback.html ↗</a></div></div></section>
-<section class="guide-section" id="contact"><div class="guide-wrap"><p class="eyebrow2">06 • CONTACT PAGE</p><h2>How Contact works</h2><p>The Contact page combines normal content elements with a clickable email link and a demonstration contact form.</p><div class="breakdown"><div class="row head"><div>Part</div><div>Tag / attribute</div><div>What it does</div><div>OPENNZO usage</div></div><div class="row"><div>Restaurant identity</div><div><code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code></div><div>Displays brand and supporting text.</div><div>OPENNZO + Fresh. Hot. Unforgettable.</div></div><div class="row"><div>Email</div><div><code>&lt;a href="mailto:..."&gt;</code></div><div>Creates a clickable email action.</div><div>Opens the visitor's email application for the proposed/demo restaurant email.</div></div><div class="row"><div>Hours</div><div><code>&lt;section&gt;</code>, <code>&lt;p&gt;</code></div><div>Organises information.</div><div>Shows presentation/demo opening-hour information.</div></div><div class="row"><div>Contact form</div><div><code>&lt;form&gt;</code></div><div>Collects visitor information.</div><div>Demonstrates labels, inputs, textarea and submit control.</div></div></div><div class="talk"><strong>Teacher answer:</strong><p>“The email is clickable because the anchor uses the <code>mailto:</code> scheme. The form is a semantic HTML form with labels connected to controls. It is a demonstration interface and does not send data to a backend.”</p></div><div class="source"><span>Open the actual Contact page source.</span><a href="https://github.com/malpura09hunter-art/opennzo-pizza-web/blob/main/contact.html" target="_blank" rel="noopener">Open contact.html ↗</a></div></div></section>
-<section class="guide-section" id="html"><div class="guide-wrap"><p class="eyebrow2">07 • COMPLETE HTML REFERENCE</p><h2>HTML tags used in OPENNZO</h2><p>This section tells you what each important tag means and where to point to it in the project. For the complete reference, use the dedicated HTML + CSS Reference page.</p><div class="tag-grid"><div class="tag-card"><code>&lt;header&gt;</code><p>Introductory/header region. Used for the site navigation header.</p></div><div class="tag-card"><code>&lt;nav&gt;</code><p>Navigation landmark containing page links.</p></div><div class="tag-card"><code>&lt;main&gt;</code><p>Primary unique content of a page.</p></div><div class="tag-card"><code>&lt;section&gt;</code><p>Groups related content into a meaningful section.</p></div><div class="tag-card"><code>&lt;article&gt;</code><p>Self-contained item such as a pizza, feature or team card.</p></div><div class="tag-card"><code>&lt;h1&gt;–&lt;h3&gt;</code><p>Heading hierarchy for page and section structure.</p></div><div class="tag-card"><code>&lt;p&gt;</code><p>Paragraph content and explanations.</p></div><div class="tag-card"><code>&lt;a&gt;</code><p>Navigation, CTA and clickable email links.</p></div><div class="tag-card"><code>&lt;img&gt;</code><p>Displays pizza imagery with <code>src</code> and <code>alt</code>.</p></div><div class="tag-card"><code>&lt;figure&gt; / &lt;figcaption&gt;</code><p>Groups the hero image with its caption.</p></div><div class="tag-card"><code>&lt;form&gt;</code><p>Container for Order, Feedback and Contact controls.</p></div><div class="tag-card"><code>&lt;label&gt;</code><p>Accessible name for a form control.</p></div><div class="tag-card"><code>&lt;input&gt;</code><p>Text, email, telephone, number, time, radio and checkbox controls.</p></div><div class="tag-card"><code>&lt;select&gt; / &lt;option&gt;</code><p>Dropdown controls and their choices.</p></div><div class="tag-card"><code>&lt;textarea&gt;</code><p>Multi-line user input.</p></div><div class="tag-card"><code>&lt;button&gt;</code><p>Form action control.</p></div><div class="tag-card"><code>&lt;footer&gt;</code><p>Closing project/site information.</p></div><div class="tag-card"><code>&lt;pre&gt; / &lt;code&gt;</code><p>Documentation source-code display.</p></div></div><a class="cta" href="web-reference.html">Open complete HTML + CSS reference →</a></div></section>
-<section class="guide-section" id="css"><div class="guide-wrap"><p class="eyebrow2">08 • CSS REFERENCE</p><h2>How CSS creates the OPENNZO UI</h2><div class="cards"><article class="card"><h3>Selectors</h3><p>Element selectors target tags; class selectors such as <code>.hero</code> style reusable components; ID selectors target unique elements.</p></article><article class="card"><h3>Box Model</h3><p>Every element is built from content, padding, border and margin. OPENNZO uses these to control spacing and card proportions.</p></article><article class="card"><h3>Flexbox</h3><p>Used for one-dimensional alignment such as navigation, button groups and card rows.</p></article><article class="card"><h3>CSS Grid</h3><p>Used for two-dimensional layouts such as pizza cards, team cards and feature grids.</p></article><article class="card"><h3>Transitions</h3><p>Make hover/focus changes smooth instead of instant.</p></article><article class="card"><h3>Transforms</h3><p>Effects such as <code>scale()</code> and <code>translateY()</code> create subtle card/image movement.</p></article><article class="card"><h3>Typography</h3><p>Properties such as <code>font-size</code>, <code>font-weight</code>, <code>line-height</code> and <code>letter-spacing</code> create hierarchy.</p></article><article class="card"><h3>Media Queries</h3><p>Change layouts at smaller widths so the separate pages work on phones, tablets and desktops.</p></article><article class="card"><h3>CSS Variables</h3><p>Reusable custom properties keep colours, spacing and other design values consistent.</p></article></div><a class="cta" href="web-reference.html#css">Open complete CSS reference →</a></div></section>
-<section class="guide-section" id="source"><div class="guide-wrap"><p class="eyebrow2">09 • ACTUAL SOURCE CODE</p><h2>Show the teacher the real code.</h2><p>The source-code page should always be treated as the project source of truth. Do not use invented snippets when explaining the project. Open the actual files in GitHub and show the exact HTML/CSS that is deployed.</p><div class="cards"><article class="card"><h3>Home</h3><p><code>index.html</code></p><a href="https://github.com/malpura09hunter-art/opennzo-pizza-web/blob/main/index.html" target="_blank" rel="noopener">Actual source ↗</a></article><article class="card"><h3>Stylesheet</h3><p><code>style.css</code></p><a href="https://github.com/malpura09hunter-art/opennzo-pizza-web/blob/main/style.css" target="_blank" rel="noopener">Actual CSS ↗</a></article><article class="card"><h3>All source details</h3><p>Technical source-code presentation.</p><a href="code-details.html">Open Code Details →</a></article></div></div></section>
-<section class="guide-section" id="talk"><div class="guide-wrap"><p class="eyebrow2">10 • PRESENTATION MODE</p><h2>Questions your teacher can ask</h2><div class="cards"><article class="card"><h3>What is HTML?</h3><p>HTML stands for HyperText Markup Language. It provides the structure and meaning of webpage content.</p></article><article class="card"><h3>What is CSS?</h3><p>CSS stands for Cascading Style Sheets. It controls presentation: layout, colours, typography, spacing, responsive behaviour and visual effects.</p></article><article class="card"><h3>Why HTML5?</h3><p>HTML5 provides modern semantic elements such as header, nav, main, section, article and footer.</p></article><article class="card"><h3>Why CSS Grid?</h3><p>Grid is useful when content needs rows and columns, such as the menu and team cards.</p></article><article class="card"><h3>Why Flexbox?</h3><p>Flexbox is useful for aligning items along one direction, such as navigation and button groups.</p></article><article class="card"><h3>Why no JavaScript for the restaurant UI?</h3><p>The restaurant pages are intentionally built around HTML5 and CSS3 fundamentals. A small access script exists only for the custom entrance lock.</p></article></div><div class="talk"><strong>Closing answer:</strong><p>“OPENNZO demonstrates how a complete multi-page website can be structured with semantic HTML and designed with CSS. Each page has a clear purpose, the forms demonstrate HTML controls and accessibility, CSS Grid and Flexbox create the responsive layouts, and the documentation lets us explain the actual implementation rather than only theory.”</p></div><a class="cta" href="presentation-guide.html">Open presentation speaking guide →</a></div></section>
+
+<!-- ============================================================
+     HERO
+============================================================ -->
+
+<section class="guide-hero">
+
+    <div class="guide-wrap">
+
+        <p class="eyebrow">
+            WEB PROGRAMMING PROJECT • 2026
+        </p>
+
+        <h1>
+            Curious how
+            <em>OPENNZO</em>
+            was built?
+        </h1>
+
+        <p class="guide-lead">
+
+            Go behind the interface and explore how OPENNZO
+            was created using HTML5 and CSS3. Understand the
+            actual webpage structure, HTML tags, attributes,
+            forms, CSS styling, colours, layouts, responsive
+            design, transitions, animations and the source
+            code used throughout the project.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ============================================================
+     GUIDE NAVIGATION
+============================================================ -->
+
+<nav class="guide-nav">
+
+    <div class="guide-wrap">
+
+        <a href="#overview">Overview</a>
+
+        <a href="#html">HTML</a>
+
+        <a href="#tags">Tags</a>
+
+        <a href="#attributes">Attributes</a>
+
+        <a href="#forms">Forms</a>
+
+        <a href="#css">CSS</a>
+
+        <a href="#colors">Colours</a>
+
+        <a href="#layout">Layout</a>
+
+        <a href="#responsive">Responsive</a>
+
+        <a href="#source">Source</a>
+
+    </div>
+
+</nav>
+
+
+<!-- ============================================================
+     01 PROJECT OVERVIEW
+============================================================ -->
+
+<section
+    class="guide-section"
+    id="overview"
+>
+
+    <div class="guide-wrap">
+
+        <p class="eyebrow">
+            01 • PROJECT OVERVIEW
+        </p>
+
+        <h2>
+            OPENNZO Web Programming Project
+        </h2>
+
+        <p>
+
+            OPENNZO is a pizza restaurant presentation
+            website created as a Web Programming project.
+
+            HTML5 is used to create the structure of the
+            webpages, while CSS3 is used to control their
+            visual appearance and layout.
+
+        </p>
+
+        <div class="cards">
+
+            <article class="card">
+
+                <span class="card-number">
+                    TECHNOLOGY
+                </span>
+
+                <h3>HTML5</h3>
+
+                <p>
+                    Creates the structure and content
+                    of the webpages.
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <span class="card-number">
+                    TECHNOLOGY
+                </span>
+
+                <h3>CSS3</h3>
+
+                <p>
+                    Controls colours, typography,
+                    spacing, layouts, responsiveness
+                    and visual effects.
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <span class="card-number">
+                    STRUCTURE
+                </span>
+
+                <h3>Separate Pages</h3>
+
+                <p>
+                    Home, About, Menu, Orders, Feedback,
+                    Team, Contact, Code Details,
+                    Explanation and Project Guide.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ============================================================
+     02 WHAT IS HTML
+============================================================ -->
+
+<section
+    class="guide-section"
+    id="html"
+>
+
+    <div class="guide-wrap">
+
+        <p class="eyebrow">
+            02 • HTML
+        </p>
+
+        <h2>
+            What is HTML?
+        </h2>
+
+        <p>
+
+            HTML stands for
+            <strong>HyperText Markup Language</strong>.
+
+            HTML is used to create the structure of
+            webpages.
+
+        </p>
+
+        <div class="code-box">
+
+<pre>
+&lt;!DOCTYPE html&gt;
+
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;title&gt;OPENNZO&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;h1&gt;OPENNZO&lt;/h1&gt;
+
+    &lt;p&gt;
+        Fresh. Hot. Unforgettable.
+    &lt;/p&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+
+        </div>
+
+        <div class="callout">
+
+            <strong>
+                Basic structure
+            </strong>
+
+            <p>
+
+                The document declaration identifies
+                the document as HTML5. The
+                <code>&lt;html&gt;</code> element contains
+                the document, while
+                <code>&lt;head&gt;</code> contains metadata
+                and <code>&lt;body&gt;</code> contains the
+                visible webpage content.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ============================================================
+     03 HTML TAGS
+============================================================ -->
+
+<section
+    class="guide-section"
+    id="tags"
+>
+
+    <div class="guide-wrap">
+
+        <p class="eyebrow">
+            03 • HTML TAGS
+        </p>
+
+        <h2>
+            HTML tags used in OPENNZO
+        </h2>
+
+        <p>
+
+            These are the main HTML elements used to
+            structure the OPENNZO webpages.
+
+            Each example refers to the type of
+            structure used in the project.
+
+        </p>
+
+
+        <div class="tag-grid">
+
+            <article class="tag-card">
+
+                <code>&lt;html&gt;</code>
+
+                <p>
+                    Root element containing the
+                    complete HTML document.
+                </p>
+
+            </article>
+
+
+            <article class="tag-card">
+
+                <code>&lt;head&gt;</code>
+
+                <p>
+                    Contains metadata, title and
+                    stylesheet references.
+                </p>
+
+            </article>
+
+
+            <article class="tag-card">
+
+                <code>&lt;body&gt;</code>
+
+                <p>
+                    Contains the visible webpage
+                    content.
+                </p>
+
+            </article>
+
+
+            <article class="tag-card">
+
+                <code>&lt;header&gt;</code>
+
+                <p>
+                    Represents the introductory
+                    header area of a page.
+                </p>
+
+            </article>
+
+
+            <article class="tag-card">
+
+                <code>&lt;nav&gt;</code>
+
+                <p>
+                    Contains navigation links.
+                </p>
+
+            </article>
+
+
+            <article class="tag-card">
+
+                <code>&lt;main&gt;</code>
+
+                <p>
+                    Contains the primary content
+                    of the webpage.
+                </p>
+
+            </article>
+
+
+            <article class="tag-card">
+
+                <code>&lt;section&gt;</code>
+
+                <p>
+                    Groups related content into
+                    sections.
+                </p>
+
+            </article>
+
+
+            <article class="tag-card">
+
+                <code>&lt;article&gt;</code>
+
+                <p>
+                    Represents an independent piece
+                    of content such as a card.
+                </p>
+
+            </article>
+
+
+            <article class="tag-card">
+
+                <code>&lt;h1&gt; – &lt;h3&gt;</code>
+
+                <p>
+                    Create headings and establish
+                    content hierarchy.
+                </p>
+
+            </article>
+
+
+            <article class="tag-card">
+
+                <code>&lt;p&gt;</code>
+
+                <p>
+                    Creates paragraphs of text.
+                </p>
+
+            </article>
+
+
+            <article class="tag-card">
+
+                <code>&lt;a&gt;</code>
+
+                <p>
+                    Creates clickable links between
+                    webpages or resources.
+                </p>
+
+            </article>
+
+
+            <article class="tag-card">
+
+                <code>&lt;img&gt;</code>
+
+                <p>
+                    Displays images used by the
+                    restaurant interface.
+                </p>
+
+            </article>
+
+
+            <article class="tag-card">
+
+                <code>&lt;figure&gt;</code>
+
+                <p>
+                    Groups an image with related
+                    content such as a caption.
+                </p>
+
+            </article>
+
+
+            <article class="tag-card">
+
+                <code>&lt;figcaption&gt;</code>
+
+                <p>
+                    Provides a caption for a figure.
+                </p>
+
+            </article>
+
+
+            <article class="tag-card">
+
+                <code>&lt;ul&gt;</code>
+
+                <p>
+                    Creates an unordered list.
+                </p>
+
+            </article>
+
+
+            <article class="tag-card">
+
+                <code>&lt;li&gt;</code>
+
+                <p>
+                    Creates an individual list item.
+                </p>
+
+            </article>
+
+
+            <article class="tag-card">
+
+                <code>&lt;form&gt;</code>
+
+                <p>
+                    Creates a form for collecting
+                    user input.
+                </p>
+
+            </article>
+
+
+            <article class="tag-card">
+
+                <code>&lt;label&gt;</code>
+
+                <p>
+                    Provides a label for a form
+                    control.
+                </p>
+
+            </article>
+
+
+            <article class="tag-card">
+
+                <code>&lt;input&gt;</code>
+
+                <p>
+                    Creates different types of
+                    form controls.
+                </p>
+
+            </article>
+
+
+            <article class="tag-card">
+
+                <code>&lt;select&gt;</code>
+
+                <p>
+                    Creates a dropdown control.
+                </p>
+
+            </article>
+
+
+            <article class="tag-card">
+
+                <code>&lt;option&gt;</code>
+
+                <p>
+                    Creates an option inside
+                    a select element.
+                </p>
+
+            </article>
+
+
+            <article class="tag-card">
+
+                <code>&lt;textarea&gt;</code>
+
+                <p>
+                    Creates a multi-line text field.
+                </p>
+
+            </article>
+
+
+            <article class="tag-card">
+
+                <code>&lt;button&gt;</code>
+
+                <p>
+                    Creates an interactive button.
+                </p>
+
+            </article>
+
+
+            <article class="tag-card">
+
+                <code>&lt;footer&gt;</code>
+
+                <p>
+                    Represents the footer area
+                    of a webpage.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ============================================================
+     04 ATTRIBUTES
+============================================================ -->
+
+<section
+    class="guide-section"
+    id="attributes"
+>
+
+    <div class="guide-wrap">
+
+        <p class="eyebrow">
+            04 • HTML ATTRIBUTES
+        </p>
+
+        <h2>
+            HTML attributes
+        </h2>
+
+        <p>
+
+            Attributes provide additional information
+            about HTML elements.
+
+        </p>
+
+
+        <div class="table">
+
+            <div class="table-row table-head">
+
+                <div>Attribute</div>
+
+                <div>Purpose</div>
+
+                <div>OPENNZO use</div>
+
+            </div>
+
+
+            <div class="table-row">
+
+                <div>
+                    <code>class</code>
+                </div>
+
+                <div>
+                    Identifies elements for CSS styling.
+                </div>
+
+                <div>
+                    Used throughout the interface
+                    for reusable styles.
+                </div>
+
+            </div>
+
+
+            <div class="table-row">
+
+                <div>
+                    <code>id</code>
+                </div>
+
+                <div>
+                    Gives an element a unique identifier.
+                </div>
+
+                <div>
+                    Used for specific sections and
+                    navigation targets.
+                </div>
+
+            </div>
+
+
+            <div class="table-row">
+
+                <div>
+                    <code>href</code>
+                </div>
+
+                <div>
+                    Specifies the destination of a link.
+                </div>
+
+                <div>
+                    Connects pages such as
+                    <code>menu.html</code> and
+                    <code>contact.html</code>.
+                </div>
+
+            </div>
+
+
+            <div class="table-row">
+
+                <div>
+                    <code>src</code>
+                </div>
+
+                <div>
+                    Specifies an image or resource location.
+                </div>
+
+                <div>
+                    Used by images displayed in the
+                    restaurant pages.
+                </div>
+
+            </div>
+
+
+            <div class="table-row">
+
+                <div>
+                    <code>alt</code>
+                </div>
+
+                <div>
+                    Provides alternative text for an image.
+                </div>
+
+                <div>
+                    Used to describe images.
+                </div>
+
+            </div>
+
+
+            <div class="table-row">
+
+                <div>
+                    <code>type</code>
+                </div>
+
+                <div>
+                    Specifies the type of an input.
+                </div>
+
+                <div>
+                    Used for different form controls.
+                </div>
+
+            </div>
+
+
+            <div class="table-row">
+
+                <div>
+                    <code>name</code>
+                </div>
+
+                <div>
+                    Identifies form data.
+                </div>
+
+                <div>
+                    Used by form controls.
+                </div>
+
+            </div>
+
+
+            <div class="table-row">
+
+                <div>
+                    <code>placeholder</code>
+                </div>
+
+                <div>
+                    Displays temporary guidance inside
+                    an input.
+                </div>
+
+                <div>
+                    Used in form fields.
+                </div>
+
+            </div>
+
+
+            <div class="table-row">
+
+                <div>
+                    <code>required</code>
+                </div>
+
+                <div>
+                    Makes a form field required.
+                </div>
+
+                <div>
+                    Used for important form inputs.
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ============================================================
+     05 FORMS
+============================================================ -->
+
+<section
+    class="guide-section"
+    id="forms"
+>
+
+    <div class="guide-wrap">
+
+        <p class="eyebrow">
+            05 • HTML FORMS
+        </p>
+
+        <h2>
+            Forms used in OPENNZO
+        </h2>
+
+        <p>
+
+            The order and feedback pages demonstrate
+            HTML form controls.
+
+        </p>
+
+
+        <div class="cards">
+
+            <article class="card">
+
+                <code>&lt;form&gt;</code>
+
+                <h3>Form container</h3>
+
+                <p>
+                    Groups the controls that collect
+                    user input.
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <code>&lt;label&gt;</code>
+
+                <h3>Field label</h3>
+
+                <p>
+                    Identifies what information should
+                    be entered.
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <code>&lt;input&gt;</code>
+
+                <h3>Input control</h3>
+
+                <p>
+                    Allows text, numbers, email,
+                    radio buttons and other inputs.
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <code>&lt;select&gt;</code>
+
+                <h3>Dropdown</h3>
+
+                <p>
+                    Allows the user to select from
+                    predefined options.
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <code>&lt;textarea&gt;</code>
+
+                <h3>Long text</h3>
+
+                <p>
+                    Allows larger pieces of text
+                    such as feedback.
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <code>&lt;button&gt;</code>
+
+                <h3>Action</h3>
+
+                <p>
+                    Creates a control for submitting
+                    or interacting with the form.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ============================================================
+     06 WHAT IS CSS
+============================================================ -->
+
+<section
+    class="guide-section"
+    id="css"
+>
+
+    <div class="guide-wrap">
+
+        <p class="eyebrow">
+            06 • CSS
+        </p>
+
+        <h2>
+            What is CSS?
+        </h2>
+
+        <p>
+
+            CSS stands for
+            <strong>Cascading Style Sheets</strong>.
+
+            CSS controls how HTML elements look
+            and how they are arranged on the page.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre>
+.example {
+    color: #f4eee5;
+    background: #171614;
+    padding: 20px;
+}
+</pre>
+
+        </div>
+
+
+        <div class="callout">
+
+            <strong>
+                CSS structure
+            </strong>
+
+            <p>
+
+                <code>.example</code> is the selector.
+
+                <code>color</code>,
+                <code>background</code> and
+                <code>padding</code> are properties.
+
+                Their assigned values control the
+                appearance of the selected element.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ============================================================
+     07 ACTUAL OPENNZO COLOURS
+============================================================ -->
+
+<section
+    class="guide-section"
+    id="colors"
+>
+
+    <div class="guide-wrap">
+
+        <p class="eyebrow">
+            07 • CSS COLOURS
+        </p>
+
+        <h2>
+            Colours already used in OPENNZO
+        </h2>
+
+        <p>
+
+            The examples below use colours that are
+            already present in the OPENNZO project styling.
+            They are not random CSS examples.
+
+        </p>
+
+
+        <div class="cards">
+
+            <article class="card">
+
+                <code>#10100f</code>
+
+                <h3>Dark Background</h3>
+
+                <p>
+                    Used as the dark background colour
+                    for the project guide.
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <code>#f4eee5</code>
+
+                <h3>Light Text</h3>
+
+                <p>
+                    Used for primary light text against
+                    the dark interface.
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <code>#e4572e</code>
+
+                <h3>Accent</h3>
+
+                <p>
+                    Used as an orange accent colour
+                    throughout the guide styling.
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <code>#aaa39a</code>
+
+                <h3>Secondary Text</h3>
+
+                <p>
+                    Used for supporting and descriptive
+                    text.
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <code>#171614</code>
+
+                <h3>Card Background</h3>
+
+                <p>
+                    Used for dark cards and content
+                    containers.
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <code>#36322e</code>
+
+                <h3>Border</h3>
+
+                <p>
+                    Used for borders around cards,
+                    tables and content blocks.
+                </p>
+
+            </article>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre>
+.guide {
+    background: #10100f;
+    color: #f4eee5;
+}
+
+.guide h1 em {
+    color: #e4572e;
+}
+
+.guide p {
+    color: #aaa39a;
+}
+
+.card {
+    background: #171614;
+    border: 1px solid #36322e;
+}
+</pre>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ============================================================
+     08 CSS LAYOUT
+============================================================ -->
+
+<section
+    class="guide-section"
+    id="layout"
+>
+
+    <div class="guide-wrap">
+
+        <p class="eyebrow">
+            08 • CSS LAYOUT
+        </p>
+
+        <h2>
+            Layout used in OPENNZO
+        </h2>
+
+        <div class="cards">
+
+            <article class="card">
+
+                <code>display: grid;</code>
+
+                <h3>CSS Grid</h3>
+
+                <p>
+                    Used to arrange cards and content
+                    into columns.
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <code>display: flex;</code>
+
+                <h3>Flexbox</h3>
+
+                <p>
+                    Used for navigation and
+                    one-dimensional alignment.
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <code>gap</code>
+
+                <h3>Spacing</h3>
+
+                <p>
+                    Controls the space between
+                    Grid and Flexbox items.
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <code>padding</code>
+
+                <h3>Inside spacing</h3>
+
+                <p>
+                    Creates space between an element's
+                    content and its boundary.
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <code>margin</code>
+
+                <h3>Outside spacing</h3>
+
+                <p>
+                    Creates space around elements.
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <code>border-radius</code>
+
+                <h3>Rounded corners</h3>
+
+                <p>
+                    Creates the rounded card and
+                    button appearance.
+                </p>
+
+            </article>
+
+        </div>
+
+
+        <div class="code-box">
+
+<pre>
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.card {
+    padding: 24px;
+    border: 1px solid #36322e;
+    border-radius: 18px;
+}
+</pre>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ============================================================
+     09 RESPONSIVE DESIGN
+============================================================ -->
+
+<section
+    class="guide-section"
+    id="responsive"
+>
+
+    <div class="guide-wrap">
+
+        <p class="eyebrow">
+            09 • RESPONSIVE DESIGN
+        </p>
+
+        <h2>
+            Making OPENNZO responsive
+        </h2>
+
+        <p>
+
+            Media queries allow the layout to change
+            according to the available screen width.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre>
+@media (max-width: 850px) {
+
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media (max-width: 560px) {
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+}
+</pre>
+
+        </div>
+
+
+        <div class="callout">
+
+            <strong>
+                How it works
+            </strong>
+
+            <p>
+
+                On larger screens the cards can appear
+                in multiple columns. At smaller widths,
+                the CSS changes the Grid so the content
+                fits mobile screens.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ============================================================
+     10 SOURCE CODE
+============================================================ -->
+
+<section
+    class="guide-section"
+    id="source"
+>
+
+    <div class="guide-wrap">
+
+        <p class="eyebrow">
+            10 • SOURCE CODE
+        </p>
+
+        <h2>
+            Actual OPENNZO source files
+        </h2>
+
+        <p>
+
+            The project is organised into separate HTML
+            pages. Each page contains its own structure
+            and connects to the shared CSS stylesheet.
+
+        </p>
+
+
+        <div class="cards">
+
+            <article class="card">
+
+                <span class="card-number">
+                    HTML
+                </span>
+
+                <h3>Home</h3>
+
+                <p>
+                    Main restaurant homepage.
+                </p>
+
+                <a
+                    class="source-link"
+                    href="https://github.com/malpura09hunter-art/opennzo-pizza-web/blob/main/index.html"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    View index.html ↗
+                </a>
+
+            </article>
+
+
+            <article class="card">
+
+                <span class="card-number">
+                    CSS
+                </span>
+
+                <h3>Stylesheet</h3>
+
+                <p>
+                    Main project styling.
+                </p>
+
+                <a
+                    class="source-link"
+                    href="https://github.com/malpura09hunter-art/opennzo-pizza-web/blob/main/style.css"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    View style.css ↗
+                </a>
+
+            </article>
+
+
+            <article class="card">
+
+                <span class="card-number">
+                    HTML
+                </span>
+
+                <h3>Menu</h3>
+
+                <p>
+                    Pizza menu and product cards.
+                </p>
+
+                <a
+                    class="source-link"
+                    href="https://github.com/malpura09hunter-art/opennzo-pizza-web/blob/main/menu.html"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    View menu.html ↗
+                </a>
+
+            </article>
+
+
+            <article class="card">
+
+                <span class="card-number">
+                    HTML
+                </span>
+
+                <h3>Orders</h3>
+
+                <p>
+                    Pizza ordering form.
+                </p>
+
+                <a
+                    class="source-link"
+                    href="https://github.com/malpura09hunter-art/opennzo-pizza-web/blob/main/orders.html"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    View orders.html ↗
+                </a>
+
+            </article>
+
+
+            <article class="card">
+
+                <span class="card-number">
+                    HTML
+                </span>
+
+                <h3>Feedback</h3>
+
+                <p>
+                    Feedback form and controls.
+                </p>
+
+                <a
+                    class="source-link"
+                    href="https://github.com/malpura09hunter-art/opennzo-pizza-web/blob/main/feedback.html"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    View feedback.html ↗
+                </a>
+
+            </article>
+
+
+            <article class="card">
+
+                <span class="card-number">
+                    HTML
+                </span>
+
+                <h3>Contact</h3>
+
+                <p>
+                    Contact information and form.
+                </p>
+
+                <a
+                    class="source-link"
+                    href="https://github.com/malpura09hunter-art/opennzo-pizza-web/blob/main/contact.html"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    View contact.html ↗
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ============================================================
+     PROJECT INFORMATION
+============================================================ -->
+
+<section class="guide-section">
+
+    <div class="guide-wrap">
+
+        <p class="eyebrow">
+            PROJECT INFORMATION
+        </p>
+
+        <h2>
+            OPENNZO
+        </h2>
+
+        <p>
+            Web Programming Project • 2026
+        </p>
+
+        <div class="cards">
+
+            <article class="card">
+
+                <h3>
+                    Technologies
+                </h3>
+
+                <p>
+                    HTML5 + CSS3
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <h3>
+                    Faculty
+                </h3>
+
+                <p>
+                    Samrudhi Mam
+                </p>
+
+            </article>
+
+
+            <article class="card">
+
+                <h3>
+                    Project
+                </h3>
+
+                <p>
+                    OPENNZO Pizza Restaurant Website
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
 </main>
-<footer><div class="guide-wrap"><strong>OPENNZO</strong><p>Fresh. Hot. Unforgettable. • Web Programming Practical • 2026</p><a href="index.html">← Return to Demo Website</a></div></footer>
+
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+
+<footer class="guide-footer">
+
+    <div class="guide-wrap">
+
+        <strong>
+            OPENNZO.
+        </strong>
+
+        <p>
+            Fresh. Hot. Unforgettable.
+        </p>
+
+    </div>
+
+</footer>
+
+
 </body>
 </html>
