@@ -14,8 +14,6 @@
     return;
   }
 
-  /* Keep the password field fully interactive. Do not override window timers
-     or interfere with normal browser input/focus behaviour. */
   input.disabled = false;
   input.readOnly = false;
   button.disabled = false;
@@ -48,4 +46,19 @@
       window.setTimeout(() => gate.remove(), 1000);
     }, 800);
   });
+
+  /* The visual transition is CSS-driven. This only lets the existing
+     introduction link finish its fade before loading the homepage. */
+  const intro = document.getElementById('opennzo-intro');
+  const introButton = document.getElementById('intro-skip');
+  if (introButton && intro) {
+    introButton.addEventListener('click', (event) => {
+      if (introButton.tagName.toLowerCase() !== 'a') return;
+      event.preventDefault();
+      intro.classList.add('intro-exit');
+      window.setTimeout(() => {
+        window.location.href = introButton.getAttribute('href') || 'index.html';
+      }, 650);
+    });
+  }
 })();
