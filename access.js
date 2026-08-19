@@ -47,17 +47,16 @@
     }, 800);
   });
 
-  /* The visual transition is CSS-driven. This only lets the existing
-     introduction link finish its fade before loading the homepage. */
+  /* CSS performs the visual animation. This small navigation handler only
+     waits for the existing CSS fade, then opens the homepage. */
   const intro = document.getElementById('opennzo-intro');
   const introButton = document.getElementById('intro-skip');
   if (introButton && intro) {
     introButton.addEventListener('click', (event) => {
-      if (introButton.tagName.toLowerCase() !== 'a') return;
       event.preventDefault();
       intro.classList.add('intro-exit');
       window.setTimeout(() => {
-        window.location.href = introButton.getAttribute('href') || 'index.html';
+        window.location.href = 'index.html';
       }, 650);
     });
   }
