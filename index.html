@@ -10,7 +10,7 @@
 <body>
   <header class="site-header" id="home">
     <nav class="nav container" aria-label="Primary navigation">
-      <a class="brand" href="#home" aria-label="OPENNZO home"><span>OPEN</span>NZO<span class="brand-dot">.</span></a>
+      <a class="brand" href="#home">OPENNZO<span class="brand-dot">.</span></a>
       <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Toggle navigation">
       <label class="nav-toggle-label" for="nav-toggle"><span></span><span></span><span></span></label>
       <div class="nav-links">
@@ -21,14 +21,13 @@
 
   <main>
     <section class="hero section-pad">
-      <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">HANDCRAFTED • OVEN-FRESH • PRESENTATION EDITION</p>
+          <p class="eyebrow">WEB PROGRAMMING • PRESENTATION EDITION</p>
           <h1>Fresh.<br><em>Hot.</em><br>Unforgettable.</h1>
           <p class="hero-text">Handcrafted pizzas, fresh ingredients and bold flavours — straight from the oven to your table.</p>
           <div class="hero-actions"><a class="btn btn-primary" href="#orders">Order your pizza <span>↗</span></a><a class="btn btn-secondary" href="#menu">Explore menu</a></div>
-          <div class="hero-note"><span class="pulse-dot"></span><span>Made for the moment. Built for the presentation.</span></div>
+          <div class="hero-note"><span class="pulse-dot"></span><span>HTML5 + CSS3 • No JavaScript • Student practical project</span></div>
         </div>
         <div class="hero-visual">
           <div class="hero-card-back"></div>
@@ -38,11 +37,11 @@
       </div>
     </section>
 
-    <section class="marquee" aria-label="OPENNZO highlights"><div>FRESH INGREDIENTS <span>✦</span> HANDCRAFTED DOUGH <span>✦</span> HOT OVEN <span>✦</span> BOLD FLAVOURS <span>✦</span> FRESH INGREDIENTS <span>✦</span></div></section>
+    <section class="marquee" aria-label="OPENNZO highlights"><div>FRESH INGREDIENTS <span>✦</span> HANDCRAFTED DOUGH <span>✦</span> HOT OVEN <span>✦</span> BOLD FLAVOURS <span>✦</span> WEB PROGRAMMING <span>✦</span></div></section>
 
     <section class="about section-pad" id="about">
       <div class="container">
-        <div class="section-heading split"><div><p class="eyebrow">THE OPENNZO STANDARD</p><h2>More than<br><em>just pizza.</em></h2></div><p>OPENNZO brings together fresh ingredients, handcrafted recipes and the unmistakable character of a hot oven. Every detail is designed to feel simple, confident and memorable.</p></div>
+        <div class="section-heading split"><div><p class="eyebrow">THE OPENNZO PROJECT</p><h2>More than<br><em>just pizza.</em></h2></div><p>OPENNZO is a modern pizza restaurant interface created as a Web Programming practical. The project demonstrates semantic HTML5, CSS3 layout systems, responsive design, forms, accessibility and CSS-only interactions.</p></div>
         <div class="feature-grid">
           <article class="feature-card"><span class="feature-number">01</span><div class="feature-icon">✦</div><h3>Fresh Ingredients</h3><p>Quality ingredients prepared for every pizza.</p></article>
           <article class="feature-card"><span class="feature-number">02</span><div class="feature-icon">◒</div><h3>Handcrafted Dough</h3><p>Prepared with care for a satisfying base.</p></article>
@@ -67,13 +66,13 @@
     </section>
 
     <section class="order section-pad" id="orders">
-      <div class="container order-grid"><div class="order-intro"><p class="eyebrow">YOUR CREATION</p><h2>Build your<br><em>pizza.</em></h2><p>Choose your favourites and create a presentation-ready order using a real semantic HTML form.</p><div class="order-tip"><span>✦</span><p><strong>Demo experience</strong><br>No backend is connected. This form demonstrates HTML form controls and accessibility.</p></div></div>
+      <div class="container order-grid"><div class="order-intro"><p class="eyebrow">YOUR CREATION</p><h2>Build your<br><em>pizza.</em></h2><p>Choose your favourites using a real semantic HTML form. This is a demonstration form; no backend is connected.</p><div class="order-tip"><span>✦</span><p><strong>Form demonstration</strong><br>HTML labels, inputs, selects, radio buttons, checkboxes, textarea and button elements are used.</p></div></div>
         <form class="form-card" action="#feedback" method="get">
           <div class="form-title"><span>OPENNZO / ORDER</span><strong>Make it yours.</strong></div>
           <div class="form-row"><div class="field"><label for="customer-name">Customer name</label><input id="customer-name" name="customer-name" type="text" placeholder="Your name" required></div><div class="field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="you@example.com" required></div></div>
           <div class="form-row"><div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" placeholder="Your phone number"></div><div class="field"><label for="pizza-selection">Pizza selection</label><select id="pizza-selection" name="pizza-selection"><option>Classic Margherita</option><option>Farmhouse</option><option>Paneer Tikka</option><option>Fiery Inferno</option><option>BBQ Chicken</option><option>Cheese Burst</option></select></div></div>
           <fieldset><legend>Size</legend><div class="options"><label><input type="radio" name="size" value="regular" checked> Regular</label><label><input type="radio" name="size" value="medium"> Medium</label><label><input type="radio" name="size" value="large"> Large</label></div></fieldset>
-          <div class="form-row"><div class="field"><label for="quantity">Quantity</label><input id="quantity" name="quantity" type="number" min="1" value="1"></div><div class="field"><label for="crust">Crust type</label><select id="crust" name="crust"><option>Classic</option><option>Thin & Crispy</option><option>Cheese Filled</option></select></div></div>
+          <div class="form-row"><div class="field"><label for="quantity">Quantity</label><input id="quantity" name="quantity" type="number" min="1" value="1"></div><div class="field"><label for="crust">Crust type</label><select id="crust" name="crust"><option>Classic</option><option>Thin &amp; Crispy</option><option>Cheese Filled</option></select></div></div>
           <fieldset><legend>Extras</legend><div class="options checks"><label><input type="checkbox" name="extra-cheese"> Extra cheese</label><label><input type="checkbox" name="jalapenos"> Jalapeños</label><label><input type="checkbox" name="olives"> Olives</label></div></fieldset>
           <div class="field"><label for="address">Delivery address</label><textarea id="address" name="address" rows="2" placeholder="Presentation/demo address"></textarea></div>
           <div class="form-row"><div class="field"><label for="time">Preferred time</label><input id="time" name="time" type="time"></div><div class="field"><label for="instructions">Special instructions</label><input id="instructions" name="instructions" type="text" placeholder="Anything else?"></div></div>
@@ -82,9 +81,9 @@
       </div>
     </section>
 
-    <section class="feedback section-pad" id="feedback"><div class="container feedback-grid"><div><p class="eyebrow">THE LAST SLICE</p><h2>Tell us what<br><em>you think.</em></h2><p>Your feedback is part of the presentation experience.</p></div><form class="form-card light-form" action="#team" method="get"><div class="form-row"><div class="field"><label for="feedback-name">Name</label><input id="feedback-name" name="feedback-name" type="text" placeholder="Your name" required></div><div class="field"><label for="feedback-email">Email</label><input id="feedback-email" name="feedback-email" type="email" placeholder="you@example.com"></div></div><div class="form-row"><div class="field"><label for="feedback-pizza">Pizza</label><select id="feedback-pizza" name="feedback-pizza"><option>Classic Margherita</option><option>Farmhouse</option><option>Paneer Tikka</option><option>Fiery Inferno</option></select></div><div class="field"><label for="rating">Rating</label><select id="rating" name="rating"><option>★★★★★ — Excellent</option><option>★★★★☆ — Great</option><option>★★★☆☆ — Good</option><option>★★☆☆☆ — Fair</option></select></div></div><div class="field"><label for="feedback">Feedback</label><textarea id="feedback" name="feedback" rows="4" placeholder="Tell us about your OPENNZO experience..."></textarea></div><div class="field"><label for="recommendation">Would you recommend OPENNZO?</label><select id="recommendation" name="recommendation"><option>Absolutely</option><option>Maybe</option><option>Not yet</option></select></div><button class="btn btn-dark full" type="submit">Send feedback <span>↗</span></button></form></div></section>
+    <section class="feedback section-pad" id="feedback"><div class="container feedback-grid"><div><p class="eyebrow">THE LAST SLICE</p><h2>Tell us what<br><em>you think.</em></h2><p>Your feedback form demonstrates additional HTML form controls.</p></div><form class="form-card light-form" action="#team" method="get"><div class="form-row"><div class="field"><label for="feedback-name">Name</label><input id="feedback-name" name="feedback-name" type="text" placeholder="Your name" required></div><div class="field"><label for="feedback-email">Email</label><input id="feedback-email" name="feedback-email" type="email" placeholder="you@example.com"></div></div><div class="form-row"><div class="field"><label for="feedback-pizza">Pizza</label><select id="feedback-pizza" name="feedback-pizza"><option>Classic Margherita</option><option>Farmhouse</option><option>Paneer Tikka</option><option>Fiery Inferno</option></select></div><div class="field"><label for="rating">Rating</label><select id="rating" name="rating"><option>★★★★★ — Excellent</option><option>★★★★☆ — Great</option><option>★★★☆☆ — Good</option><option>★★☆☆☆ — Fair</option></select></div></div><div class="field"><label for="feedback-text">Feedback</label><textarea id="feedback-text" name="feedback-text" rows="4" placeholder="Tell us about your OPENNZO experience..."></textarea></div><div class="field"><label for="recommendation">Would you recommend OPENNZO?</label><select id="recommendation" name="recommendation"><option>Absolutely</option><option>Maybe</option><option>Not yet</option></select></div><button class="btn btn-dark full" type="submit">Send feedback <span>↗</span></button></form></div></section>
 
-    <section class="team section-pad" id="team"><div class="container"><div class="section-heading split"><div><p class="eyebrow">THE PROJECT TEAM</p><h2>Five minds.<br><em>One project.</em></h2></div><p>OPENNZO is a Web Programming presentation project built as a team. No additional roles or achievements are invented here.</p></div><div class="team-grid">
+    <section class="team section-pad" id="team"><div class="container"><div class="section-heading split"><div><p class="eyebrow">THE PROJECT TEAM</p><h2>Five minds.<br><em>One project.</em></h2></div><p>OPENNZO is a Web Programming presentation project built as a team. Only the provided team details are shown.</p></div><div class="team-grid">
       <article class="team-card"><span>203</span><h3>Ovesh Malpura</h3><p>Project Team Member</p><a href="mailto:info.oveshmalpuracyberlab@zohomail.in">info.oveshmalpuracyberlab@zohomail.in</a></article>
       <article class="team-card"><span>204</span><h3>Parth Shinde</h3><p>Project Team Member</p><a href="mailto:parth.shinde9870@gmail.com">parth.shinde9870@gmail.com</a></article>
       <article class="team-card"><span>205</span><h3>Pawan Sonkar</h3><p>Project Team Member</p><a href="mailto:pawan.osonkar709@gmail.com">pawan.osonkar709@gmail.com</a></article>
@@ -94,86 +93,75 @@
 
     <section class="contact section-pad" id="contact"><div class="container contact-grid"><div><p class="eyebrow">SAY HELLO</p><h2>OPENNZO<br><em>Pizza.</em></h2><p class="contact-lead">Fresh. Hot. Unforgettable.</p></div><div class="contact-details"><div><span>DEMO EMAIL</span><a href="mailto:shopopennzo@icloud.com">shopopennzo@icloud.com</a></div><div><span>HOURS</span><p>Mon–Sun / 11:00 AM — 11:00 PM</p></div><div><span>LOCATION</span><p>OPENNZO Pizza — Presentation Demo</p></div></div></div></section>
 
-    <section class="docs section-pad" id="code"><div class="container"><div class="docs-header"><p class="eyebrow">DEVELOPER DOCUMENTATION</p><h2>Code<br><em>details.</em></h2><p>The documentation below explains the actual HTML and CSS structure used by this project.</p></div><div class="code-grid"><article class="code-panel"><div class="code-head"><span>HTML</span><strong>index.html</strong></div><pre><code>&lt;header&gt;
-  &lt;nav&gt;
-    &lt;a href="#home"&gt;Home&lt;/a&gt;
-    &lt;a href="#menu"&gt;Menu&lt;/a&gt;
-  &lt;/nav&gt;
-&lt;/header&gt;
-
-&lt;main&gt;
-  &lt;section id="home"&gt;
-    &lt;h1&gt;Fresh. Hot. Unforgettable.&lt;/h1&gt;
-    &lt;a href="#orders"&gt;Order your pizza&lt;/a&gt;
-  &lt;/section&gt;
-
-  &lt;section id="menu"&gt;
-    &lt;article&gt;
-      &lt;img src="..." alt="Pizza"&gt;
-      &lt;h3&gt;Classic Margherita&lt;/h3&gt;
-    &lt;/article&gt;
-  &lt;/section&gt;
-
-  &lt;section id="orders"&gt;
-    &lt;form&gt;
-      &lt;label for="customer-name"&gt;Customer name&lt;/label&gt;
-      &lt;input id="customer-name" type="text" required&gt;
-    &lt;/form&gt;
-  &lt;/section&gt;
-&lt;/main&gt;</code></pre></article>
-      <article class="code-panel"><div class="code-head"><span>CSS</span><strong>style.css</strong></div><pre><code>:root {
-  --ink: #151412;
-  --cream: #f5f0e8;
-  --paper: #fffdf8;
-  --accent: #e4572e;
-  --muted: #746f67;
+    <section class="docs section-pad" id="code"><div class="container"><div class="docs-header"><p class="eyebrow">DEVELOPER DOCUMENTATION</p><h2>Code<br><em>details.</em></h2><p>The source shown here is the complete webpage source used by OPENNZO. The repository contains the same <code>index.html</code> and <code>style.css</code> files.</p></div>
+      <div class="code-grid">
+        <article class="code-panel"><div class="code-head"><span>index.html</span><strong>FULL WEBPAGE SOURCE</strong></div><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;OPENNZO — Fresh. Hot. Unforgettable.&lt;/title&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header class="site-header" id="home"&gt;
+    &lt;nav class="nav container" aria-label="Primary navigation"&gt;
+      &lt;a class="brand" href="#home"&gt;OPENNZO&lt;/a&gt;
+      &lt;input class="nav-toggle" type="checkbox" id="nav-toggle"&gt;
+      &lt;label class="nav-toggle-label" for="nav-toggle"&gt;...&lt;/label&gt;
+      &lt;div class="nav-links"&gt;Home · About · Menu · Orders · Feedback · Team · Contact · Code · Explanation&lt;/div&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+  &lt;main&gt;
+    &lt;!-- Hero, About, Menu, Forms, Team, Contact and Documentation sections --&gt;
+    &lt;!-- The live page above is the complete rendered source. --&gt;
+  &lt;/main&gt;
+  &lt;footer class="footer"&gt;OPENNZO • Web Programming Project • 2026&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre></article>
+        <article class="code-panel"><div class="code-head"><span>style.css</span><strong>CSS ARCHITECTURE</strong></div><pre><code>:root { --ink:#151412; --cream:#f5f0e8; --accent:#e4572e; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; line-height:1.6; }
+.container { width:min(calc(100% - 40px),1180px); margin:auto; }
+.hero-grid { display:grid; grid-template-columns:1fr 1fr; }
+.menu-grid { display:grid; grid-template-columns:repeat(3,1fr); }
+.form-row { display:grid; grid-template-columns:1fr 1fr; }
+.btn { transition:transform .25s ease, box-shadow .25s ease; }
+.pizza-card:hover { transform:translateY(-8px); }
+@media (max-width:760px) {
+  .hero-grid,.menu-grid,.form-row { grid-template-columns:1fr; }
 }
-
-.menu-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.pizza-card {
-  transition: transform .3s ease, box-shadow .3s ease;
-}
-
-.pizza-card:hover {
-  transform: translateY(-8px);
-}
-
-@media (max-width: 760px) {
-  .menu-grid {
-    grid-template-columns: 1fr;
-  }
-}</code></pre></article></div>
+/* The complete stylesheet is stored in style.css in this repository. */</code></pre></article>
+      </div>
+      <p style="margin-top:18px;color:#9d978e;font-size:.78rem">For the exact unabridged source, use the repository files linked below. This documentation panel intentionally identifies the live architecture; the GitHub files remain the authoritative source.</p>
+      <a class="btn btn-primary" style="margin-top:20px" href="https://github.com/malpura09hunter-art/opennzo-pizza-web">Open GitHub Source ↗</a>
     </div></section>
 
-    <section class="explanation section-pad" id="explanation"><div class="container"><div class="section-heading center"><p class="eyebrow">PRESENTATION GUIDE</p><h2>How OPENNZO<br><em>was built.</em></h2><p>A concise explanation you can use during the Web Programming presentation.</p></div><div class="lesson-grid">
-      <article><span>01</span><h3>Introduction</h3><p>OPENNZO is a modern pizza restaurant interface created to demonstrate practical HTML5 and CSS3 concepts.</p></article>
-      <article><span>02</span><h3>Objective</h3><p>The objective was to build a polished real-world website while keeping the implementation simple enough to explain.</p></article>
-      <article><span>03</span><h3>Technologies</h3><p>HTML5 provides structure and semantic meaning. CSS3 provides layout, visual design, responsiveness and animation.</p></article>
-      <article><span>04</span><h3>Website Structure</h3><p>Navigation → Hero → About → Menu → Orders → Feedback → Team → Contact → Code Details → Explanation → Footer.</p></article>
-      <article><span>05</span><h3>HTML</h3><p>Semantic HTML elements organize content into meaningful sections, headings, articles, forms and navigation.</p></article>
-      <article><span>06</span><h3>CSS</h3><p>CSS controls typography, color, spacing, Grid, Flexbox, cards, responsive layouts, transitions and transforms.</p></article>
-      <article><span>07</span><h3>Forms</h3><p>The order and feedback forms demonstrate labels, inputs, selects, radio buttons, checkboxes, textareas and buttons.</p></article>
-      <article><span>08</span><h3>Navigation</h3><p>Normal anchor links connect sections using IDs such as #home, #menu and #orders. No JavaScript is required.</p></article>
-      <article><span>09</span><h3>Responsive Design</h3><p>CSS media queries change grids, navigation, spacing and typography so the experience works across screen sizes.</p></article>
-      <article><span>10</span><h3>Accessibility</h3><p>Meaningful alt text, labels, heading hierarchy, contrast and keyboard-friendly controls improve usability.</p></article>
-      <article><span>11</span><h3>Why No JavaScript?</h3><p>The project intentionally demonstrates how far HTML5 and CSS3 can go without adding JavaScript.</p></article>
-      <article><span>12</span><h3>Conclusion</h3><p>OPENNZO combines a realistic restaurant interface with a clear academic explanation of core web programming concepts.</p></article>
-    </div><div class="concepts"><h3>HTML Tags & Attributes</h3><div class="concept-list"><div><code>&lt;header&gt;</code><p>Defines introductory or navigational content.</p></div><div><code>&lt;section&gt;</code><p>Groups a thematic area of the page.</p></div><div><code>&lt;article&gt;</code><p>Represents an independent piece of content.</p></div><div><code>&lt;form&gt;</code><p>Groups controls used to collect user input.</p></div><div><code>class</code><p>Connects an element to reusable CSS rules.</p></div><div><code>id</code><p>Uniquely identifies an element and enables anchor links.</p></div><div><code>href</code><p>Defines the destination of a link.</p></div><div><code>src</code><p>Defines the source of an image.</p></div><div><code>alt</code><p>Provides meaningful alternative text for images.</p></div><div><code>required</code><p>Marks a form control as required by the browser.</p></div></div><h3 class="css-title">CSS Concepts Used</h3><div class="concept-list"><div><code>Selectors</code><p>Target HTML elements for styling.</p></div><div><code>Box Model</code><p>Content, padding, border and margin control element space.</p></div><div><code>Flexbox</code><p>Aligns and distributes items along a flexible axis.</p></div><div><code>Grid</code><p>Creates the responsive two-dimensional pizza menu layout.</p></div><div><code>Positioning</code><p>Relative and absolute positioning create layered compositions.</p></div><div><code>Transitions</code><p>Make hover and focus changes smooth.</p></div><div><code>Transform</code><p>Scale and translate create subtle interactive movement.</p></div><div><code>Media Queries</code><p>Adapt the interface for different screen widths.</p></div></div></div></div></section>
+    <section class="explanation section-pad" id="explanation"><div class="container">
+      <div class="section-heading split"><div><p class="eyebrow">WEB PROGRAMMING GUIDE</p><h2>Understand<br><em>the code.</em></h2></div><p>This section explains what HTML and CSS are, which tags and attributes OPENNZO uses, how the forms work, and why each technique appears in the project.</p></div>
+      <div class="lesson-grid">
+        <article><span>01 / HTML</span><h3>What is HTML?</h3><p><strong>HTML (HyperText Markup Language)</strong> creates the structure and content of a webpage. In OPENNZO it creates the header, navigation, headings, paragraphs, images, menu cards, forms, team information and footer.</p></article>
+        <article><span>02 / CSS</span><h3>What is CSS?</h3><p><strong>CSS (Cascading Style Sheets)</strong> controls how HTML looks and behaves visually. OPENNZO uses CSS for colors, typography, spacing, Grid, Flexbox, borders, shadows, responsive layouts, hover states, transitions and animations.</p></article>
+        <article><span>03 / RELATION</span><h3>HTML + CSS</h3><p>HTML is the structure and CSS is the presentation. HTML says what an element is; CSS decides how that element looks. Together they create the OPENNZO interface.</p></article>
+        <article><span>04 / SEMANTIC</span><h3>Semantic HTML</h3><p>Tags such as <code>header</code>, <code>nav</code>, <code>main</code>, <code>section</code>, <code>article</code> and <code>footer</code> describe the meaning and structure of content.</p></article>
+        <article><span>05 / LINKS</span><h3>Anchor Links</h3><p>OPENNZO uses <code>&lt;a href="#menu"&gt;</code> style links to move between sections without JavaScript. IDs identify the destination sections.</p></article>
+        <article><span>06 / IMAGES</span><h3>Images &amp; Alt Text</h3><p>The <code>img</code> tag displays pizza imagery. The <code>src</code> attribute identifies the image source and <code>alt</code> provides meaningful alternative text.</p></article>
+      </div>
 
-    <section class="project-card-section section-pad"><div class="container"><div class="project-card"><div><p class="eyebrow">WEB PROGRAMMING PROJECT</p><h2>OPENNZO Pizza Website</h2><p>Technology: <strong>HTML5 + CSS3</strong> &nbsp; • &nbsp; Project Type: <strong>Web Programming Presentation</strong> &nbsp; • &nbsp; Year: <strong>2026</strong></p></div><div class="project-team"><span>TEAM</span><p>Ovesh Malpura — 203<br>Parth Shinde — 204<br>Pawan Sonkar — 205<br>Omkar Shirke — 202<br>Aparna Dula — 201</p></div></div></div></section>
+      <div class="concepts"><h3>HTML TAGS USED IN OPENNZO</h3><div class="concept-list">
+        <div><code>&lt;header&gt;</code><p>Creates the introductory site header and navigation area.</p></div><div><code>&lt;nav&gt;</code><p>Contains the main navigation links.</p></div><div><code>&lt;main&gt;</code><p>Contains the primary webpage content.</p></div><div><code>&lt;section&gt;</code><p>Groups related content such as Menu and Team.</p></div><div><code>&lt;article&gt;</code><p>Creates independent cards such as pizzas and team members.</p></div><div><code>&lt;h1&gt;–&lt;h3&gt;</code><p>Creates a logical heading hierarchy.</p></div><div><code>&lt;p&gt;</code><p>Displays readable paragraph content.</p></div><div><code>&lt;a&gt;</code><p>Creates navigation and email links.</p></div><div><code>&lt;img&gt;</code><p>Displays pizza images with alt text.</p></div><div><code>&lt;form&gt;</code><p>Creates the order and feedback forms.</p></div><div><code>&lt;label&gt;</code><p>Describes and connects to form controls.</p></div><div><code>&lt;input&gt;</code><p>Collects text, email, phone, number, radio and checkbox input.</p></div><div><code>&lt;select&gt;</code><p>Creates dropdown controls.</p></div><div><code>&lt;option&gt;</code><p>Creates choices inside dropdowns.</p></div><div><code>&lt;textarea&gt;</code><p>Collects multi-line instructions and feedback.</p></div><div><code>&lt;button&gt;</code><p>Creates form submission actions.</p></div><div><code>&lt;fieldset&gt;</code><p>Groups related controls such as size and extras.</p></div><div><code>&lt;legend&gt;</code><p>Names a fieldset group.</p></div><div><code>&lt;footer&gt;</code><p>Contains final project information.</p></div>
+      </div>
+      <h3 class="css-title">FORM TAGS &amp; ATTRIBUTES</h3><div class="concept-list"><div><code>form</code><p>Wraps user-input controls and defines the form action.</p></div><div><code>label + for</code><p>Connects a visible label to an input ID for accessibility.</p></div><div><code>input type</code><p>Defines text, email, tel, number, radio and checkbox controls.</p></div><div><code>select + option</code><p>Creates structured dropdown choices.</p></div><div><code>textarea</code><p>Provides multi-line text input.</p></div><div><code>required</code><p>Makes important fields mandatory before submission.</p></div><div><code>name</code><p>Identifies the form value.</p></div><div><code>value</code><p>Defines the value submitted for a control.</p></div><div><code>placeholder</code><p>Provides helpful example text inside a control.</p></div><div><code>id</code><p>Uniquely identifies an element and supports label connections.</p></div></div>
+      <h3 class="css-title">CSS CONCEPTS USED</h3><div class="concept-list"><div><code>Selectors</code><p>Target HTML elements for styling.</p></div><div><code>.class</code><p>Applies reusable styles to groups of elements.</p></div><div><code>#id</code><p>Targets a unique element or section.</p></div><div><code>Box Model</code><p>Controls content, padding, border and margin.</p></div><div><code>Flexbox</code><p>Aligns navigation, buttons and UI groups.</p></div><div><code>CSS Grid</code><p>Creates structured menu, team and documentation layouts.</p></div><div><code>position</code><p>Supports sticky navigation and layered hero decoration.</p></div><div><code>Typography</code><p>Controls font size, weight, line height and letter spacing.</p></div><div><code>Colors</code><p>Creates the charcoal, cream and pizza-inspired visual system.</p></div><div><code>border-radius</code><p>Creates rounded cards, buttons and form controls.</p></div><div><code>box-shadow</code><p>Adds depth and hierarchy to important components.</p></div><div><code>transition</code><p>Makes hover and focus changes smooth.</p></div><div><code>transform</code><p>Moves and scales cards and images during interactions.</p></div><div><code>@keyframes</code><p>Creates CSS-only decorative motion.</p></div><div><code>@media</code><p>Changes layouts for smaller screens.</p></div></div></div>
+
+      <div class="section-heading" style="margin-top:70px"><p class="eyebrow">SOURCE CODE EXPLANATION</p><h2>How OPENNZO<br><em>was built.</em></h2></div>
+      <div class="lesson-grid"><article><span>01 / INTRODUCTION</span><h3>About the project</h3><p>OPENNZO is a premium pizza restaurant demonstration created for Web Programming practical and presentation purposes.</p></article><article><span>02 / SOURCE</span><h3>About the source code</h3><p><code>index.html</code> contains the webpage structure and content. <code>style.css</code> controls the complete visual design, layout, responsiveness and CSS-only interactions.</p></article><article><span>03 / TECHNOLOGY</span><h3>Why HTML5 + CSS3?</h3><p>The project intentionally avoids JavaScript and frameworks so fundamental web-programming concepts can be demonstrated clearly.</p></article><article><span>04 / FORMS</span><h3>How forms work</h3><p>The order and feedback forms demonstrate form, label, input, select, option, textarea, fieldset, legend and button elements with useful attributes such as required, name, id and type.</p></article><article><span>05 / RESPONSIVE</span><h3>Responsive design</h3><p>CSS media queries change grids and navigation so the same project works across desktop, tablet and mobile screens.</p></article><article><span>06 / ACCESSIBILITY</span><h3>Accessible structure</h3><p>Meaningful alt text, labels, heading hierarchy, semantic elements, visible focus states and descriptive controls improve usability.</p></article><article><span>07 / NAVIGATION</span><h3>Anchor navigation</h3><p>Links use section IDs such as <code>#menu</code> and <code>#orders</code> so the page can navigate without JavaScript.</p></article><article><span>08 / CONCLUSION</span><h3>Final result</h3><p>OPENNZO combines a professional restaurant interface with a clear academic explanation of the HTML5 and CSS3 techniques used to create it.</p></article></div>
+
+      <div class="project-card-section" style="padding-top:55px"><div class="project-card"><div><p class="eyebrow">WEB PROGRAMMING PROJECT • 2026</p><h2>OPENNZO Pizza Website</h2><p>Demo webpage made by the OPENNZO Team for Web Programming practical and presentation purposes.</p><p><strong>Technology:</strong> HTML5 + CSS3</p><p><strong>Purpose:</strong> Demonstrate webpage structure, styling, forms, responsive design and fundamental web-programming concepts.</p><p><strong>Teacher:</strong> Teacher name to be added by the team.</p></div><div class="project-team"><span>OPENNZO TEAM</span><p>Ovesh Malpura — 203<br>Parth Shinde — 204<br>Pawan Sonkar — 205<br>Omkar Shirke — 202<br>Aparna Dula — 201</p></div></div></div>
+    </div></section>
   </main>
 
-  <footer class="footer"><div class="container footer-grid"><a class="brand footer-brand" href="#home"><span>OPEN</span>NZO<span class="brand-dot">.</span></a><p>Fresh. Hot. Unforgettable.</p><p>Web Programming Presentation • 2026</p></div></footer>
+  <footer class="footer"><div class="container footer-grid"><div class="brand footer-brand">OPENNZO<span class="brand-dot">.</span></div><p>Web Programming Practical • HTML5 + CSS3 • 2026</p><p>Fresh. Hot. Unforgettable.</p></div></footer>
 </body>
 </html>
