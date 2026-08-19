@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="OPENNZO Web Programming reference: complete HTML tags and CSS concepts used in the project with real examples.">
+  <title>OPENNZO — HTML & CSS Complete Reference</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="explanation-page">
+<header class="site-header">
+  <nav class="nav container" aria-label="Reference navigation">
+    <a class="brand" href="index.html">OPENNZO<span class="brand-dot">.</span></a>
+    <div class="nav-links">
+      <a href="index.html">Demo Website</a>
+      <a href="presentation-guide.html">Explanation</a>
+      <a href="#html-tags">HTML Tags</a>
+      <a href="#attributes">Attributes</a>
+      <a href="#forms">Forms</a>
+      <a href="#css">CSS</a>
+      <a href="#css-layout">Layout</a>
+      <a href="#css-effects">Effects</a>
+      <a href="#responsive">Responsive</a>
+    </div>
+  </nav>
+</header>
+<main>
+<section class="docs section-pad" id="html-tags"><div class="container">
+<p class="eyebrow">OPENNZO • COMPLETE REFERENCE • HTML5</p>
+<h1 class="docs-header">Every HTML tag<br><em>used in OPENNZO.</em></h1>
+<p class="lead">This reference explains the actual HTML elements used by the project, what each one does, and how that element appears in the OPENNZO webpage. The examples are based on the project's implementation rather than unrelated textbook examples.</p>
+<div class="concepts"><div class="concept-list">
+<div><code>&lt;!DOCTYPE html&gt;</code><p><strong>Purpose:</strong> Tells the browser to use modern HTML standards. <strong>OPENNZO:</strong> It is the first declaration in <code>index.html</code>.</p><pre><code>&lt;!DOCTYPE html&gt;</code></pre></div>
+<div><code>&lt;html&gt;</code></div><p><strong>Purpose:</strong> Root element of the document. <strong>OPENNZO:</strong> <code>&lt;html lang="en"&gt;</code> identifies the page language.</p>
+<div><code>&lt;head&gt;</code></div><p><strong>Purpose:</strong> Holds metadata and resources. <strong>OPENNZO:</strong> Contains the viewport, description, title and CSS link.</p>
+<div><code>&lt;meta&gt;</code></div><p><strong>Purpose:</strong> Supplies metadata. <strong>OPENNZO example:</strong> <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>.</p>
+<div><code>&lt;title&gt;</code></div><p><strong>Purpose:</strong> Browser tab title. <strong>OPENNZO example:</strong> <code>OPENNZO — Fresh. Hot. Unforgettable.</code>.</p>
+<div><code>&lt;link&gt;</code></div><p><strong>Purpose:</strong> Connects an external resource. <strong>OPENNZO:</strong> <code>&lt;link rel="stylesheet" href="style.css"&gt;</code> connects CSS.</p>
+<div><code>&lt;body&gt;</code></div><p><strong>Purpose:</strong> Contains visible webpage content. <strong>OPENNZO:</strong> All restaurant sections are inside the body.</p>
+<div><code>&lt;header&gt;</code></div><p><strong>Purpose:</strong> Introductory/header content. <strong>OPENNZO:</strong> The site header contains the navigation and brand.</p>
+<div><code>&lt;nav&gt;</code></div><p><strong>Purpose:</strong> Groups navigation links. <strong>OPENNZO example:</strong> <code>&lt;nav class="nav container" aria-label="Primary navigation"&gt;</code>.</p>
+<div><code>&lt;main&gt;</code></div><p><strong>Purpose:</strong> Primary page content. <strong>OPENNZO:</strong> Hero, About, Menu, Orders, Feedback, Team, Contact and documentation are main content.</p>
+<div><code>&lt;section&gt;</code></div><p><strong>Purpose:</strong> Groups related content. <strong>OPENNZO:</strong> Sections use IDs such as <code>id="menu"</code> so navigation can target them.</p>
+<div><code>&lt;article&gt;</code></div><p><strong>Purpose:</strong> Represents a self-contained content item. <strong>OPENNZO:</strong> Used for feature, pizza, team and documentation cards.</p>
+<div><code>&lt;div&gt;</code></div><p><strong>Purpose:</strong> Generic structural container when no more semantic element fits. <strong>OPENNZO:</strong> Used for layout wrappers and card content groups.</p>
+<div><code>&lt;span&gt;</code></div><p><strong>Purpose:</strong> Small inline container. <strong>OPENNZO:</strong> Used in the brand for the decorative dot and in labels/eyebrows.</p>
+<div><code>&lt;h1&gt;</code></div><p><strong>Purpose:</strong> Main page heading. <strong>OPENNZO:</strong> The primary hero brand/title uses the highest heading level.</p>
+<div><code>&lt;h2&gt;</code></div><p><strong>Purpose:</strong> Major section heading. <strong>OPENNZO:</strong> Used for headings such as “MORE THAN JUST PIZZA”.</p>
+<div><code>&lt;h3&gt;</code></div><p><strong>Purpose:</strong> Subsection/card heading. <strong>OPENNZO:</strong> Used for pizza names, feature titles and documentation topics.</p>
+<div><code>&lt;p&gt;</code></div><p><strong>Purpose:</strong> Paragraph text. <strong>OPENNZO:</strong> Used for descriptions, project information and explanatory content.</p>
+<div><code>&lt;a&gt;</code></div><p><strong>Purpose:</strong> Creates hyperlinks. <strong>OPENNZO example:</strong> <code>&lt;a href="#menu"&gt;EXPLORE MENU&lt;/a&gt;</code> jumps to the menu.</p>
+<div><code>&lt;img&gt;</code></div><p><strong>Purpose:</strong> Displays an image. <strong>OPENNZO:</strong> Pizza images use <code>src</code> and meaningful <code>alt</code> text.</p>
+<div><code>&lt;ul&gt;</code></div><p><strong>Purpose:</strong> Unordered list. <strong>OPENNZO:</strong> Available wherever grouped content is represented as a list.</p>
+<div><code>&lt;ol&gt;</code></div><p><strong>Purpose:</strong> Ordered list. Use when sequence matters, such as numbered presentation steps.</p>
+<div><code>&lt;li&gt;</code></div><p><strong>Purpose:</strong> Individual item inside <code>ul</code> or <code>ol</code>. It provides the content of a list entry.</p>
+<div><code>&lt;form&gt;</code></div><p><strong>Purpose:</strong> Groups user-input controls. <strong>OPENNZO:</strong> Used for the pizza order and feedback forms.</p>
+<div><code>&lt;label&gt;</code></div><p><strong>Purpose:</strong> Names a form control and improves accessibility. <strong>OPENNZO:</strong> Labels are connected to controls using <code>for</code> and <code>id</code>.</p>
+<div><code>&lt;input&gt;</code></div><p><strong>Purpose:</strong> Single-value form control. <strong>OPENNZO:</strong> Demonstrates text, email, tel, number, time, radio and checkbox types.</p>
+<div><code>&lt;select&gt;</code></div><p><strong>Purpose:</strong> Dropdown selection. <strong>OPENNZO:</strong> Pizza, size and crust choices use select controls.</p>
+<div><code>&lt;option&gt;</code></div><p><strong>Purpose:</strong> Choice inside a select. <strong>OPENNZO:</strong> Each pizza/size/crust choice is represented by an option.</p>
+<div><code>&lt;textarea&gt;</code></div><p><strong>Purpose:</strong> Multi-line text input. <strong>OPENNZO:</strong> Used for special instructions and feedback.</p>
+<div><code>&lt;button&gt;</code></div><p><strong>Purpose:</strong> Interactive button. <strong>OPENNZO:</strong> Used for order/submit actions and styled as a CTA.</p>
+<div><code>&lt;fieldset&gt;</code></div><p><strong>Purpose:</strong> Groups related form controls. <strong>OPENNZO:</strong> Useful for related options such as pizza size or extras.</p>
+<div><code>&lt;legend&gt;</code></div><p><strong>Purpose:</strong> Gives a fieldset its caption. It makes grouped choices understandable.</p>
+<div><code>&lt;footer&gt;</code></div><p><strong>Purpose:</strong> Closing/footer content. <strong>OPENNZO:</strong> Contains project identity and presentation information.</p>
+<div><code>&lt;strong&gt;</code></div><p><strong>Purpose:</strong> Marks text as strongly important. <strong>OPENNZO:</strong> Used to emphasize technology names and important documentation labels.</p>
+<div><code>&lt;em&gt;</code></div><p><strong>Purpose:</strong> Emphasized text. <strong>OPENNZO:</strong> Used for visual emphasis in headings such as “Fresh. Hot. Unforgettable.”</p>
+<div><code>&lt;br&gt;</code></div><p><strong>Purpose:</strong> Creates a line break. <strong>OPENNZO:</strong> Used sparingly where a deliberate text line break is part of the composition.</p>
+<div><code>&lt;code&gt;</code></div><p><strong>Purpose:</strong> Marks inline computer code. <strong>OPENNZO:</strong> Used throughout documentation for tags, attributes, filenames and CSS selectors.</p>
+<div><code>&lt;pre&gt;</code></div><p><strong>Purpose:</strong> Preserves whitespace and line breaks. <strong>OPENNZO:</strong> Used for formatted source-code presentation.</p>
+</div></div>
+</div></section>
+
+<section class="explanation section-pad" id="attributes"><div class="container"><p class="eyebrow">HTML ATTRIBUTES</p><h2>Every important<br><em>attribute.</em></h2><div class="lesson-grid" style="margin-top:45px">
+<article><h3>id</h3><p>Unique identifier. <code>&lt;section id="menu"&gt;</code> lets <code>href="#menu"</code> navigate directly to the menu.</p></article>
+<article><h3>class</h3><p>Reusable styling hook. <code>class="pizza-card"</code> allows CSS to style all pizza cards consistently.</p></article>
+<article><h3>href</h3><p>Link destination. <code>&lt;a href="#orders"&gt;ORDER&lt;/a&gt;</code> moves to the orders section.</p></article>
+<article><h3>src</h3><p>Resource path. <code>&lt;img src="assets/images/pizza.jpg" ...&gt;</code> tells the browser where the image is.</p></article>
+<article><h3>alt</h3><p>Alternative image description. Example: <code>alt="Fresh OPENNZO Margherita pizza"</code>.</p></article>
+<article><h3>type</h3><p>Defines control behaviour. Examples: <code>type="email"</code>, <code>type="radio"</code>, <code>type="checkbox"</code>, <code>type="submit"</code>.</p></article>
+<article><h3>name</h3><p>Names a form value. Radio buttons sharing a <code>name</code> behave as one choice group.</p></article>
+<article><h3>placeholder</h3><p>Shows an input hint, for example <code>placeholder="Enter your name"</code>.</p></article>
+<article><h3>required</h3><p>Marks a form field as mandatory and enables browser validation.</p></article>
+<article><h3>value</h3><p>Defines the value represented by a radio, checkbox or other form control.</p></article>
+<article><h3>for</h3><p>Connects a label to the control whose <code>id</code> matches it: <code>&lt;label for="email"&gt;</code>.</p></article>
+<article><h3>aria-label</h3><p>Provides an accessible name where visible text is not sufficient. OPENNZO uses it on navigation and the CSS-only menu control.</p></article>
+<article><h3>lang</h3><p>Declares document language: <code>&lt;html lang="en"&gt;</code>.</p></article>
+<article><h3>rel</h3><p>Describes a relationship between documents/resources. OPENNZO uses <code>rel="stylesheet"</code> on the CSS link.</p></article>
+<article><h3>content / name</h3><p>Used by meta elements to provide viewport and description metadata.</p></article>
+</div></div></section>
+
+<section class="docs section-pad" id="forms"><div class="container"><p class="eyebrow">FORM REFERENCE</p><h2>Form tags<br><em>in the real page.</em></h2><div class="concepts" style="margin-top:45px"><h3>Actual structure pattern</h3><pre><code>&lt;form&gt;
+  &lt;label for="customer-name"&gt;Customer Name&lt;/label&gt;
+  &lt;input id="customer-name" name="customer-name" type="text" required&gt;
+
+  &lt;label for="pizza"&gt;Pizza Selection&lt;/label&gt;
+  &lt;select id="pizza" name="pizza"&gt;
+    &lt;option value="margherita"&gt;Classic Margherita&lt;/option&gt;
+    &lt;option value="farmhouse"&gt;Farmhouse&lt;/option&gt;
+  &lt;/select&gt;
+
+  &lt;fieldset&gt;
+    &lt;legend&gt;Size&lt;/legend&gt;
+    &lt;label&gt;&lt;input type="radio" name="size" value="medium"&gt; Medium&lt;/label&gt;
+    &lt;label&gt;&lt;input type="radio" name="size" value="large"&gt; Large&lt;/label&gt;
+  &lt;/fieldset&gt;
+
+  &lt;label&gt;&lt;input type="checkbox" name="extra-cheese" value="yes"&gt; Extra Cheese&lt;/label&gt;
+  &lt;label for="instructions"&gt;Special Instructions&lt;/label&gt;
+  &lt;textarea id="instructions" name="instructions"&gt;&lt;/textarea&gt;
+  &lt;button type="submit"&gt;Place Demo Order&lt;/button&gt;
+&lt;/form&gt;</code></pre><p><strong>How to explain it:</strong> The form is the container. Labels identify controls. Inputs collect typed or selected values. Select/option provide dropdown choices. Fieldset/legend group related controls. Textarea collects longer text. Button provides the action.</p></div></div></section>
+
+<section class="explanation section-pad" id="css"><div class="container"><p class="eyebrow">CSS3 REFERENCE • SEPARATE FROM HTML</p><h2>CSS properties &amp;<br><em>how OPENNZO uses them.</em></h2><div class="lesson-grid" style="margin-top:45px">
+<article><h3>color</h3><p>Sets text color. OPENNZO uses it to create readable cream/dark text hierarchy.</p><code>color: var(--ink);</code></article>
+<article><h3>background / background-color</h3><p>Sets section/card backgrounds and the brand palette.</p><code>background: var(--cream);</code></article>
+<article><h3>font-family</h3><p>Controls typeface. Used globally for the OPENNZO typography system.</p></article>
+<article><h3>font-size</h3><p>Controls text scale for hero headings, sections, body copy and UI labels.</p></article>
+<article><h3>font-weight</h3><p>Controls visual emphasis such as regular, medium and bold text.</p></article>
+<article><h3>line-height</h3><p>Controls vertical space between lines for readable paragraphs.</p></article>
+<article><h3>letter-spacing</h3><p>Controls spacing between characters, especially useful for uppercase labels.</p></article>
+<article><h3>margin</h3><p>Creates space outside an element, separating sections and cards.</p></article>
+<article><h3>padding</h3><p>Creates internal space between content and an element's edge.</p></article>
+<article><h3>border</h3><p>Creates an edge around cards and controls.</p></article>
+<article><h3>border-radius</h3><p>Rounds corners on cards, buttons, inputs and image containers.</p></article>
+<article><h3>box-shadow</h3><p>Adds depth to UI components without images.</p></article>
+<article><h3>width / max-width</h3><p>Controls element width and prevents content from becoming too wide.</p></article>
+<article><h3>height / min-height</h3><p>Controls or protects the vertical size of components and sections.</p></article>
+<article><h3>display</h3><p>Controls layout mode, such as <code>block</code>, <code>flex</code> or <code>grid</code>.</p></article>
+<article><h3>gap</h3><p>Creates consistent spacing between Flexbox/Grid children.</p></article>
+</div></div></section>
+
+<section class="docs section-pad" id="css-layout"><div class="container"><p class="eyebrow">CSS LAYOUT</p><h2>Flexbox, Grid &amp;<br><em>positioning.</em></h2><div class="concepts" style="margin-top:45px"><div class="concept-list">
+<div><code>display: flex</code><p>Creates a flexible one-dimensional layout. OPENNZO uses Flexbox for navigation alignment, button groups and card content.</p></div>
+<div><code>flex-direction</code><p>Controls whether flex children run in a row or column.</p></div>
+<div><code>justify-content</code><p>Controls distribution along the main axis.</p></div>
+<div><code>align-items</code><p>Aligns items on the cross axis.</p></div>
+<div><code>flex-wrap</code><p>Allows items to move onto additional lines when needed.</p></div>
+<div><code>display: grid</code><p>Creates a two-dimensional layout. OPENNZO uses Grid for pizza, feature and team cards.</p></div>
+<div><code>grid-template-columns</code><p>Defines the number and size of Grid columns. Responsive rules change the columns on smaller screens.</p></div>
+<div><code>position: relative</code><p>Creates a positioning context for absolutely positioned decorative elements.</p></div>
+<div><code>position: absolute</code><p>Positions an element relative to its positioned ancestor; useful for decorative hero elements and image composition.</p></div>
+<div><code>position: sticky</code><p>Allows a navigation/header element to remain visible within its scrolling context when implemented.</p></div>
+<div><code>z-index</code><p>Controls stacking order when positioned elements overlap.</p></div>
+<div><code>overflow</code><p>Controls how content that exceeds a box is handled; useful for keeping code and images contained.</p></div>
+</div></div></div></section>
+
+<section class="explanation section-pad" id="css-effects"><div class="container"><p class="eyebrow">CSS INTERACTION</p><h2>Transitions,<br><em>transforms & animations.</em></h2><div class="lesson-grid" style="margin-top:45px">
+<article><h3>transition</h3><p>Smoothly changes a property between states. Example concept: <code>transition: transform .3s ease, box-shadow .3s ease;</code> for cards/buttons.</p></article>
+<article><h3>transform</h3><p>Changes an element's visual position or scale without changing normal document flow. OPENNZO can use <code>translateY()</code> for card lift and <code>scale()</code> for image hover.</p></article>
+<article><h3>opacity</h3><p>Controls transparency and can be used for subtle decorative states.</p></article>
+<article><h3>animation</h3><p>Connects an element to CSS keyframes. OPENNZO uses CSS-only animation for subtle decorative movement.</p></article>
+<article><h3>@keyframes</h3><p>Defines the stages of a CSS animation, for example moving or fading a decorative element.</p></article>
+<article><h3>:hover</h3><p>Targets an element while the pointer is over it. OPENNZO uses hover for buttons, links and cards.</p></article>
+<article><h3>:focus-visible</h3><p>Provides a visible keyboard focus state so users can see which control is active.</p></article>
+<article><h3>::before / ::after</h3><p>Pseudo-elements create decorative generated content without extra HTML where appropriate.</p></article>
+</div></div></section>
+
+<section class="docs section-pad" id="responsive"><div class="container"><p class="eyebrow">RESPONSIVE CSS</p><h2>How the page<br><em>adapts to mobile.</em></h2><div class="lesson-grid" style="margin-top:45px">
+<article><h3>@media</h3><p>Media queries apply different CSS rules at different viewport sizes. OPENNZO uses them to change grids, spacing, navigation and typography.</p></article>
+<article><h3>Responsive Grid</h3><p>Desktop can show several cards per row; smaller screens reduce the number of columns so content remains readable.</p></article>
+<article><h3>Responsive navigation</h3><p>The CSS-only navigation control uses HTML plus CSS instead of JavaScript to adapt the menu on small screens.</p></article>
+<article><h3>Responsive forms</h3><p>Form columns collapse and controls become easier to use on narrow screens.</p></article>
+</div><div class="concepts" style="margin-top:35px"><h3>Teacher-friendly answer</h3><p>“Responsive design means the same webpage adapts to different screen sizes. In OPENNZO, CSS media queries change the grid, navigation, spacing, typography and form layout so the site remains usable on desktop, tablet and mobile.”</p></div></div></section>
+
+<section class="contact section-pad"><div class="container"><p class="eyebrow">QUICK REVISION</p><h2>HTML = Structure.<br><em>CSS = Presentation.</em></h2><div class="project-card" style="margin-top:35px"><p><strong>HTML:</strong> creates the semantic structure, content, links, images and forms.</p><p><strong>CSS:</strong> controls the visual appearance, layout, spacing, typography, responsiveness and interactions.</p><p><strong>OPENNZO:</strong> demonstrates both together in one complete restaurant presentation project.</p><p><a class="btn btn-primary" href="presentation-guide.html">← Back to Explanation</a> <a class="btn btn-secondary" href="index.html">View Demo Website →</a></p></div></div></section>
+</main>
+<footer class="footer"><div class="container footer-grid"><div class="brand footer-brand">OPENNZO<span class="brand-dot">.</span></div><p>Complete HTML5 + CSS3 Web Programming Reference • 2026</p></div></footer>
+</body>
+</html>
