@@ -24,20 +24,6 @@
 #opennzo-intro .intro-progress span{box-shadow:0 0 12px rgba(228,87,46,.55)!important}
 #opennzo-intro .intro-kicker{font-size:.74rem!important}
 #opennzo-intro .intro-tagline{font-size:clamp(1.08rem,2.4vw,1.45rem)!important}
-#opennzo-intro .intro-panel>*{animation:introElementReveal .75s cubic-bezier(.2,.8,.2,1) both!important;will-change:transform,opacity!important}
-#opennzo-intro .intro-panel>.intro-kicker{animation-delay:.05s!important}
-#opennzo-intro .intro-panel>.intro-logo{animation-delay:.12s!important}
-#opennzo-intro .intro-panel>.intro-tagline{animation-delay:.2s!important}
-#opennzo-intro .intro-panel>.intro-divider{animation-delay:.27s!important}
-#opennzo-intro .intro-panel>.intro-copy{animation-delay:.34s!important}
-#opennzo-intro .intro-panel>.intro-facts{animation-delay:.42s!important}
-#opennzo-intro .intro-panel>.intro-team{animation-delay:.5s!important}
-#opennzo-intro .intro-panel>.intro-progress{animation-delay:.58s!important}
-#opennzo-intro .intro-panel>.intro-hint{animation-delay:.64s!important}
-#opennzo-intro .intro-panel>.intro-skip{animation:skipReveal .75s cubic-bezier(.2,.8,.2,1) .72s both!important}
-#opennzo-intro .intro-logo{animation-name:introLogoReveal!important;will-change:transform,opacity,filter!important}
-@keyframes introElementReveal{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
-@keyframes introLogoReveal{from{opacity:0;transform:translateY(24px) scale(.94);filter:blur(6px)}to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}}
-@keyframes skipReveal{from{opacity:0;transform:translateY(15px) scale(.95)}to{opacity:1;transform:translateY(0) scale(1)}}
+#opennzo-intro .intro-logo{will-change:transform,opacity!important}
 @media(max-width:700px){#opennzo-intro .intro-panel{width:min(94%,850px)!important;padding:28px 18px 78px!important}.#opennzo-intro .intro-copy{font-size:.94rem!important;line-height:1.72!important}.#opennzo-intro .intro-fact strong{font-size:.95rem!important}.#opennzo-intro .intro-team{font-size:.8rem!important}.#opennzo-intro .intro-team span{padding:9px 11px!important}.#opennzo-intro .intro-skip{position:relative!important;right:auto!important;bottom:auto!important;display:flex!important;margin:18px auto 0!important;justify-content:center!important;align-items:center!important;min-width:210px!important}.#opennzo-intro .intro-progress{margin-top:20px!important}}
 @media(prefers-reduced-motion:reduce){#opennzo-intro .intro-panel>*{animation:none!important}#opennzo-intro .intro-skip{transition:none!important}}
