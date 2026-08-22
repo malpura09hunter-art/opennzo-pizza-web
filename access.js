@@ -1,5 +1,19 @@
 (() => {
   const PASSWORD = 'ovesh';
+
+  /* Keep the project introduction team details synchronized with the
+     actual OPENNZO team list. This runs before the password gate logic. */
+  const introTeam = document.querySelector('.intro-team');
+  if (introTeam) {
+    introTeam.innerHTML = `
+      <span><b>Om Dulam</b> · 201</span>
+      <span><b>Omkar Shirke</b> · 202</span>
+      <span><b>Ovesh Malpura</b> · 203</span>
+      <span><b>Parth Shinde</b> · 204</span>
+      <span><b>Pawan Sonkar</b> · 205</span>
+    `;
+  }
+
   const gate = document.getElementById('opennzo-lock');
   if (!gate) return;
 
