@@ -27,3 +27,35 @@
 #opennzo-intro .intro-logo{will-change:transform,opacity!important}
 @media(max-width:700px){#opennzo-intro .intro-panel{width:min(94%,850px)!important;padding:28px 18px 78px!important}.#opennzo-intro .intro-copy{font-size:.94rem!important;line-height:1.72!important}.#opennzo-intro .intro-fact strong{font-size:.95rem!important}.#opennzo-intro .intro-team{font-size:.8rem!important}.#opennzo-intro .intro-team span{padding:9px 11px!important}.#opennzo-intro .intro-skip{position:relative!important;right:auto!important;bottom:auto!important;display:flex!important;margin:18px auto 0!important;justify-content:center!important;align-items:center!important;min-width:210px!important}.#opennzo-intro .intro-progress{margin-top:20px!important}}
 @media(prefers-reduced-motion:reduce){#opennzo-intro .intro-panel>*{animation:none!important}#opennzo-intro .intro-skip{transition:none!important}}
+
+/* ===== ORDERS PAGE — ANIMATION-ONLY ENHANCEMENT (scoped to .page-orders) ===== */
+@media(prefers-reduced-motion:no-preference){
+.page-orders .site-header{animation:ordersNavIn .5s cubic-bezier(.16,.8,.24,1) both}
+.page-orders .order-intro>*{animation:ordersHeroIn .65s cubic-bezier(.16,.8,.24,1) both}
+.page-orders .order-intro>.eyebrow{animation-delay:.05s}
+.page-orders .order-intro>h1{animation-delay:.15s}
+.page-orders .order-intro>p:not(.eyebrow){animation-delay:.28s}
+.page-orders .order-intro>.order-tip{animation-delay:.4s}
+.page-orders .form-card{animation:ordersFormIn .7s cubic-bezier(.16,.8,.24,1) .2s both}
+.page-orders .order-tip>span{display:inline-block;animation:ordersTipFloat 3.2s ease-in-out infinite}
+}
+.page-orders .form-card>.reveal{opacity:0;transform:translateY(16px);transition:opacity .55s cubic-bezier(.16,.8,.24,1),transform .55s cubic-bezier(.16,.8,.24,1)}
+.page-orders .form-card>.reveal.in-view{opacity:1;transform:none}
+.page-orders .nav-links a{transition:transform .2s cubic-bezier(.16,.8,.24,1)}
+.page-orders .nav-links a:hover,.page-orders .nav-links a:focus-visible{transform:translateY(-2px)}
+.page-orders .field input,.page-orders .field select,.page-orders .field textarea{transition:border-color .2s ease,box-shadow .2s ease,transform .2s ease}
+.page-orders .field input:focus,.page-orders .field select:focus,.page-orders .field textarea:focus{transform:translateY(-1px)}
+.page-orders .options label{transition:border-color .2s ease,background .2s ease,transform .2s ease}
+.page-orders .options label:hover{border-color:rgba(228,87,46,.45);transform:translateY(-1px)}
+.page-orders .options label:has(:checked){border-color:var(--accent);background:rgba(228,87,46,.06)}
+.page-orders .options input{transition:transform .15s ease}
+.page-orders .options input:checked{transform:scale(1.1)}
+.page-orders .btn-primary:active{transform:translateY(-1px) scale(.98);transition-duration:.1s}
+@keyframes ordersNavIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+@keyframes ordersHeroIn{from{opacity:0;transform:translateY(16px) scale(.99)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes ordersFormIn{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes ordersTipFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+@media(prefers-reduced-motion:reduce){
+.page-orders .form-card>.reveal{opacity:1!important;transform:none!important;transition:none!important}
+.page-orders *{animation:none!important}
+}
